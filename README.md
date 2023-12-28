@@ -8,9 +8,11 @@ Este repositório contém o código fonte do meu portfólio pessoal, desenvolvid
 (Insira aqui os recursos principais do seu portfólio)
 
 ## Tecnologias Utilizadas
+- HTML
+- CSS
 - React
 - (Outras tecnologias que você esteja usando)
-- 
+  
 ## Como executar o projeto localmente
 
 1. Clone o repositório para sua máquina local.
