@@ -1,0 +1,51 @@
+.containerNavBar {
+    background-color: var(--lightFooter);
+}
+
+.navBarMain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 7rem;
+}
+
+.navRight {
+    display: flex;
+    align-items: center;
+}
+
+.navRight svg {
+    font-size: 1.25rem;
+}
+
+.navRightUl {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navRightUl li {
+    padding: 0 1rem;
+}
+
+.navRightUl li a {
+    text-decoration: none;
+}
+
+.modeIcon {
+    padding-left: 15px;
+}
+
+.modeIcon svg {
+    font-size: 1.75rem;
+    cursor: pointer;
+}
+
+@media (max-width: 710px) {
+
+    .navBarMain {
+        padding: 1rem 4rem;
+    }
+
+}
