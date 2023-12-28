@@ -10,7 +10,7 @@ Este repositório contém o código fonte do meu portfólio pessoal, desenvolvid
 ## Tecnologias Utilizadas
 - HTML
 - CSS
-- React
+- React JS
 - (Outras tecnologias que você esteja usando)
   
 ## Como executar o projeto localmente
