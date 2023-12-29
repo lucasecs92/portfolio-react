@@ -1,7 +1,7 @@
 
 .footer {
     height: 15vh;
-    background-color: var(--darkFooter);
+    background-color: var(--lightFooter);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -9,7 +9,25 @@
 
 .socialItem {
     padding: 10px;
-    border-radius: 50%;
     border: 0.5px solid #aaa;
+    border-radius: 50%;
     margin: 0 8px;
 }
+
+@media (max-width: 500px) {
+    
+    .footer {
+        height: 20vh;
+        flex-direction: column-reverse;
+    }
+
+    .footerInfo {
+        padding-bottom: 1rem;
+    }
+
+    .socialIcons {
+        padding-top: 1rem;
+    }
+}
+
+    

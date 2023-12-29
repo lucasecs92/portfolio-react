@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import styles from '../css/NavBar.module.css';
-import { PiMoonLight } from "react-icons/pi";
+import { LuMoon } from "react-icons/lu";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const NavBar = () => {
@@ -56,7 +56,7 @@ const NavBar = () => {
                             </ul>
                         )}
                         <span className={styles.modeIcon}>
-                            <PiMoonLight/>
+                            <LuMoon/>
                         </span>
                     </nav>
                 </nav>

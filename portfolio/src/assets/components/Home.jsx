@@ -1,4 +1,5 @@
 import styles from '../css/Home.module.css';
+import Skills from './Skills';
 
 const Home = () => {
 
@@ -6,6 +7,10 @@ const Home = () => {
         <>
             <section className={styles.containerHome}>
                 
+                <Skills/>
+
+
+
             </section>
         </>
     )
