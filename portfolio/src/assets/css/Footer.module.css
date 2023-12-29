@@ -1,0 +1,15 @@
+
+.footer {
+    height: 15vh;
+    background-color: var(--darkFooter);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.socialItem {
+    padding: 10px;
+    border-radius: 50%;
+    border: 0.5px solid #aaa;
+    margin: 0 8px;
+}
