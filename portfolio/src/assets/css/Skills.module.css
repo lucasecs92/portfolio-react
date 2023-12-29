@@ -42,8 +42,7 @@
 }
 
 @media (max-width: 1115px) {
-    
-    
+     
 }
 
 @media (max-width: 718px) {
@@ -60,14 +59,14 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
 
         height: auto;
     }
 
     .techItems {
-        margin: 0.8rem;
+        /* margin: 0.8rem; */
         padding: 1rem;
     }
 }
