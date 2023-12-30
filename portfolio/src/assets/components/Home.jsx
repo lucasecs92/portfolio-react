@@ -1,4 +1,5 @@
 import styles from '../css/Home.module.css';
+import Contact from './Contact';
 import Skills from './Skills';
 
 const Home = () => {
@@ -9,8 +10,7 @@ const Home = () => {
                 
                 <Skills/>
 
-
-
+                <Contact/>
             </section>
         </>
     )
