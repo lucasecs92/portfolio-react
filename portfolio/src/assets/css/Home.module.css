@@ -9,7 +9,7 @@
     width: 75vw;
     align-items: center;
     justify-content: space-around;
-    margin-left: 12vw;
+    margin: auto;
 }
 
 .mainPhoto {
@@ -29,31 +29,42 @@
     z-index: -1;
     box-shadow: 4px 0 10px 0 #777, 8px 0 10px 0 #aaa, 12px 0 10px 0 #eee;
 }
+
 .descriptionText {
     flex-basis: 50%;
-    padding: 15px 35px 0 20px;
+    padding: 0px 35px 0 20px;
     width: 100%;
 }
+
 .greeting {
     letter-spacing: 1.5px;
     font-size: 1em;
     line-height: 1.5;
 }
-h1 {
+
+.descriptionText h3 {
+    padding-top: 1rem;
+}
+
+.descriptionText h1 {
     font-size: 2.5em;
     letter-spacing: 2.5px;
-    margin: 24px 0;
+    /* margin: 24px 0; */
 }
-h1 span {
+
+.descriptionText h1 span {
     color: var(--dark);
 }
+
 .smallDescription {
     letter-spacing: 1px;
     color: var(--dark);
     font-size: 1.2rem;
     min-width: 250px;
     line-height: 1.5; 
+    padding-top: 1rem;
 }
+
 .smallDescription span {
     color: var(--dark);
     font-size: 1.2rem;
@@ -62,41 +73,62 @@ h1 span {
 /*-------LINKS GITHUB/LINKEDIN--------*/
 .socialMedia {
     display: flex;
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
-.resumeLink {
-    background-color: var(--dark);
-    margin: -13px 13px -13px 0;
-    padding: 15px 35px;
-    border-radius: 40px;
-    letter-spacing: 2.5px;
-    font-size: 1rem;
-    font-weight: 300;
-    display: inline-block;
-    transition: box-shadow 0.2s;
-    color: #eee;
-    text-decoration: none;
-}
-.resumeLink:hover {
-    box-shadow: 0 2px 15px 0 #000070;
-}
+
 .socialList {
     margin: 40px 0;
     list-style: none;
     display: flex;
 }
 .socialList li a {
-    margin: 0 14px;
-    padding: 9px 10px;
+    margin: 0 20px 0 0; 
+    padding: 15px;
     background-color: #fff;
-    border-radius: 6px;
+    border-radius: 50%;
     color: var(--dark);
-    border: 1px solid #ccc;
+    border: 0.5px solid #ccc;
     box-shadow: 0 4px 6px 0 #777;
+    font-size: 1.2rem;
 }
 .socialList li a:hover {
-    box-shadow: 0 2px 15px 0 #000070;
+    box-shadow: 0 2px 15px 0 var(--dark);
 }
-.socialList li a i {
-    color: var(--dark);
+
+@media (max-width: 935px) {
+    .descriptionText h1 {
+        font-size: 2.1rem;
+    }
+}
+
+@media (max-width: 718px) {
+
+    .description {
+        height: 80vh;
+    } 
+
+    .descriptionText {
+        flex-basis: auto;
+        padding: 0%;
+    }
+
+    .greeting, .descriptionText h3,.descriptionText h1 {
+        text-align: center;
+    }
+
+    .smallDescription {
+        text-align: center;
+    }
+
+    .mainPhoto {
+        display: none;
+    }
+
+    .socialMedia {
+        justify-content: center;
+    }
+
+    .socialList li a {
+        margin: 0 10px;
+    }
 }

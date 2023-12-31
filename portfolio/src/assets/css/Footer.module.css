@@ -9,7 +9,7 @@
 
 .socialItem {
     padding: 10px;
-    border: 0.5px solid #aaa;
+    border: 0.5px solid var(--dark);
     border-radius: 50%;
     margin: 0 8px;
 }

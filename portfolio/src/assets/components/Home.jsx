@@ -10,15 +10,14 @@ const Home = () => {
             <section className={styles.containerHome}>
                 <section className={styles.description}>
                     <article className={styles.descriptionText}>
-                        <p className={styles.greeting}>{"HI THERE! I'M"}</p>
-                        <h1><span>LUCAS EDUARDO</span> C. DE SOUSA</h1>
+                        <p className={styles.greeting}>{"OLÁ!"}</p>
+                        <h3>Me chamo</h3>
+                        <h1>LUCAS EDUARDO</h1>
                         <p className={styles.smallDescription}>
-                            A <span>Front-end Development</span> interested in creating interactive web applications and experiences
+                            Eu sou um <span>Desenvolvedor Front-end Junior</span> interessado em criar aplicações e experiências web interativas.
                         </p>
                         <section className={styles.socialMedia}>
                             <ul className={styles.socialList}>
-                                <a className={styles.resumeLink} href="#about" target="_blank">Resume</a>
-
                                 <li>
                                     <a href="https://www.linkedin.com/in/lucas-eduardo-cavalcante/" target="_blank" rel="noopener noreferrer"><BiLogoLinkedin/></a>
                                 </li>
