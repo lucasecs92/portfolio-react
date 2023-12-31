@@ -9,14 +9,11 @@ const Home = () => {
         <>
             <section className={styles.containerHome}>
                 <section className={styles.description}>
-                    <figure className={styles.mainPhoto}>
-                        <img src="https://github.com/lucasecs92.png" alt="Foto do meu perfil Github" />
-                    </figure>
                     <article className={styles.descriptionText}>
-                        <p className={styles.greeting}>HI THERE! IM</p>
+                        <p className={styles.greeting}>{"HI THERE! I'M"}</p>
                         <h1><span>LUCAS EDUARDO</span> C. DE SOUSA</h1>
                         <p className={styles.smallDescription}>
-                            A <span>Front-end Development</span> student interested in creating interactive web applications and experiences
+                            A <span>Front-end Development</span> interested in creating interactive web applications and experiences
                         </p>
                         <section className={styles.socialMedia}>
                             <ul className={styles.socialList}>
@@ -32,6 +29,9 @@ const Home = () => {
                             </ul>
                         </section>
                     </article>
+                    <figure className={styles.mainPhoto}>
+                        <img src="https://github.com/lucasecs92.png" alt="Foto do meu perfil Github" />
+                    </figure>
                 </section>
             </section> 
         </>

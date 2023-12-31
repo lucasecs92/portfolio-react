@@ -1,6 +1,6 @@
 .containerSkills {
     /* height: 80vh; */
-    background-color: var(--darkFooter);
+    background-color: var(--lightFooter);
     display: flex;
     flex-direction: column;
     padding: 4rem 6.5rem;

@@ -1,4 +1,102 @@
-.containerHome {
+/* .containerHome {
     background-color: var(--light);
     padding: 4rem 6.5rem;
+} */
+
+.description {
+    display: flex;
+    /* height: 91vh; */
+    width: 75vw;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 12vw;
+}
+
+.mainPhoto {
+    /* display: flex; */
+    flex-basis: 40%;
+    border-radius: 50%;
+    justify-content: center;
+    /* padding: 15px; */
+}
+
+.mainPhoto img {
+    width: 350px;
+    height: 350px;
+    margin: 100px 0;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: -1;
+    box-shadow: 4px 0 10px 0 #777, 8px 0 10px 0 #aaa, 12px 0 10px 0 #eee;
+}
+.descriptionText {
+    flex-basis: 50%;
+    padding: 15px 35px 0 20px;
+    width: 100%;
+}
+.greeting {
+    letter-spacing: 1.5px;
+    font-size: 1em;
+    line-height: 1.5;
+}
+h1 {
+    font-size: 2.5em;
+    letter-spacing: 2.5px;
+    margin: 24px 0;
+}
+h1 span {
+    color: var(--dark);
+}
+.smallDescription {
+    letter-spacing: 1px;
+    color: var(--dark);
+    font-size: 1.2rem;
+    min-width: 250px;
+    line-height: 1.5; 
+}
+.smallDescription span {
+    color: var(--dark);
+    font-size: 1.2rem;
+    font-weight: 550;
+}
+/*-------LINKS GITHUB/LINKEDIN--------*/
+.socialMedia {
+    display: flex;
+    margin-top: 30px;
+}
+.resumeLink {
+    background-color: var(--dark);
+    margin: -13px 13px -13px 0;
+    padding: 15px 35px;
+    border-radius: 40px;
+    letter-spacing: 2.5px;
+    font-size: 1rem;
+    font-weight: 300;
+    display: inline-block;
+    transition: box-shadow 0.2s;
+    color: #eee;
+    text-decoration: none;
+}
+.resumeLink:hover {
+    box-shadow: 0 2px 15px 0 #000070;
+}
+.socialList {
+    margin: 40px 0;
+    list-style: none;
+    display: flex;
+}
+.socialList li a {
+    margin: 0 14px;
+    padding: 9px 10px;
+    background-color: #fff;
+    border-radius: 6px;
+    color: var(--dark);
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px 0 #777;
+}
+.socialList li a:hover {
+    box-shadow: 0 2px 15px 0 #000070;
+}
+.socialList li a i {
+    color: var(--dark);
 }

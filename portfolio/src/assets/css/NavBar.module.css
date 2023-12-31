@@ -10,6 +10,10 @@
     padding: 1rem 7rem;
 }
 
+.navLeft {
+    color: var(--dark);
+}
+
 .navRight {
     display: flex;
     align-items: center;
@@ -31,6 +35,7 @@
 
 .navRightUl li a {
     text-decoration: none;
+    color: var(--dark);
 }
 
 .modeIcon {
@@ -39,6 +44,7 @@
 
 .burgerIcon svg, .modeIcon svg {
     cursor: pointer;
+    color: var(--dark);
 }
 
 .menuOverlay {
