@@ -16,12 +16,14 @@
     display: flex;
     list-style: none;
     height: 8.5vh;
-    margin: 1rem;
+    margin: 3rem;
 }
 
 .techItems {
-    font-size: 2rem;
-    padding: 0.6rem;
+    width: 70px;
+    height: 70px;
+    font-size: 2rem; 
+    padding: 1.1rem;
     border: 0.5px solid var(--dark);
     border-radius: 50%;
     margin: 0 15px;
@@ -41,35 +43,56 @@
     line-height: 1.6;
 }
 
-@media (max-width: 1115px) {
-     
-}
-
-@media (max-width: 718px) {
-
+@media (max-width: 946px) {
     .containerSkills {
-        padding: 4rem 2.5rem;
+        padding: 4rem 5.5rem;
     }
 
     .skillsInfo {
         text-align: center;
     }
 
+    .skillsInfo p {
+        padding: 0rem 2rem;
+    }
+
     .techIcons {
         /* display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 15px;
-        grid-row-gap: 15px; */
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;  */
 
         height: auto;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .techItems {
-        padding: 0.7rem;
-        margin: 8px 32px;
+        /* padding: 0.8rem 0.7rem 0.3rem 0.7rem; */
+        margin: 8px 25px;
     }
 }
 
+@media (max-width: 500px) {
+
+    .skillsInfo p {
+        padding: 0rem 0.2rem;
+    }
+
+    .techItems {
+        width: 40px;
+        height: 45px;
+        font-size: 2.5rem;
+        padding: 0rem;
+        border: none;
+    }
+
+}
+/* 
+@media (max-width: 402px) {
+
+    .techIcons {
+        flex-direction: column;
+    }
+} */
