@@ -1,5 +1,5 @@
 .containerNavBar {
-    background-color: var(--lightFooter);
+    background-color: var(--lightMode);
 }
 
 .navBarMain {
@@ -69,7 +69,7 @@
 }
 
 .menuList li a {
-    color: white;
+    color: var(--light);
     text-decoration: none;
     font-size: 1.5rem;
 }

@@ -1,6 +1,6 @@
+import styles from '../css/Contact.module.css';
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
-import styles from '../css/Contact.module.css';
 
 const Contact = () => {
     const [form, setForm] = useState({ nname: '', nemail: '', nmsg: '' });

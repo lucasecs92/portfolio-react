@@ -3,9 +3,12 @@
     padding: 4rem 6.5rem;
 } */
 
+.containerHome {
+    color: var(--dark);
+}
+
 .description {
     display: flex;
-    /* height: 91vh; */
     width: 75vw;
     align-items: center;
     justify-content: space-around;
@@ -13,11 +16,9 @@
 }
 
 .mainPhoto {
-    /* display: flex; */
     flex-basis: 40%;
     border-radius: 50%;
     justify-content: center;
-    /* padding: 15px; */
 }
 
 .mainPhoto img {
@@ -49,11 +50,6 @@
 .descriptionText h1 {
     font-size: 2.5em;
     letter-spacing: 2.5px;
-    /* margin: 24px 0; */
-}
-
-.descriptionText h1 span {
-    color: var(--dark);
 }
 
 .smallDescription {
@@ -66,14 +62,12 @@
 }
 
 .smallDescription span {
-    color: var(--dark);
     font-size: 1.2rem;
     font-weight: 550;
 }
 /*-------LINKS GITHUB/LINKEDIN--------*/
 .socialMedia {
     display: flex;
-    /* margin-top: 30px; */
 }
 
 .socialList {
@@ -112,7 +106,7 @@
         padding: 0%;
     }
 
-    .greeting, .descriptionText h3,.descriptionText h1 {
+    .greeting, .descriptionText h3, .descriptionText h1 {
         text-align: center;
     }
 

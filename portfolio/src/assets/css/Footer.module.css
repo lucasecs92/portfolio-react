@@ -1,10 +1,10 @@
-
-.footer {
+.containerFooter {
     height: 15vh;
-    background-color: var(--lightFooter);
+    background-color: var(--lightMode);
     display: flex;
     justify-content: space-around;
     align-items: center;
+    color: var(--dark);
 }
 
 .socialItem {
@@ -12,6 +12,7 @@
     border: 0.5px solid var(--dark);
     border-radius: 50%;
     margin: 0 8px;
+    color: var(--dark);
 }
 
 @media (max-width: 500px) {

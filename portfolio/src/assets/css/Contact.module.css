@@ -1,5 +1,6 @@
 .containerContact {
     padding: 4rem;
+    color: var(--dark);
 }
 
 .contactWrap {

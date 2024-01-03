@@ -7,7 +7,7 @@ const Footer = () => {
 
     return (
         <>
-            <section className={styles.footer}>
+            <section className={styles.containerFooter}>
                 <section className={styles.footerInfo}>
                     <p>Created by Lucas Eduardo C. De Sousa.</p>
                 </section>
