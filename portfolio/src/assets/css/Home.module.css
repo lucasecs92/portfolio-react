@@ -1,9 +1,5 @@
-/* .containerHome {
-    background-color: var(--light);
-    padding: 4rem 6.5rem;
-} */
-
 .containerHome {
+    background-color: var(--light);
     color: var(--dark);
 }
 
@@ -88,6 +84,13 @@
 .socialList li a:hover {
     box-shadow: 0 2px 15px 0 var(--dark);
 }
+
+/* DARK MODE */
+
+.darkMode {
+    background-color: var(--darkMode);
+    color: var(--light);
+ }
 
 @media (max-width: 935px) {
     .descriptionText h1 {

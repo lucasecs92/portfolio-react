@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import styles from '../css/NavBar.module.css';
-import { LuMoon } from "react-icons/lu";
+import { LuMoon, LuSun } from "react-icons/lu";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const NavBar = () => {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 710);
     const [showMenu, setShowMenu] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(false);
 
     useEffect(() => {
         const handleResize = () => {
@@ -32,11 +33,12 @@ const NavBar = () => {
 
     return (
         <>
-            <section className={styles.containerNavBar}>
+            <section className={`${styles.containerNavBar} ${isDarkMode ? styles.darkMode : ''}`}>
                 <nav className={styles.navBarMain}>
                     <nav className={styles.navLeft}>
-                        <h3>JustADev</h3>
+                        <h3 className={`${isDarkMode ? styles.darkMode : ''}`}>JustADev</h3>
                     </nav>
+
                     <nav className={styles.navRight}>
                         {isMobile ? (
                             <span className={styles.burgerIcon} onClick={handleClick}>
@@ -55,8 +57,8 @@ const NavBar = () => {
                                 </li>
                             </ul>
                         )}
-                        <span className={styles.modeIcon}>
-                            <LuMoon/>
+                        <span className={styles.modeIcon} onClick={() => setIsDarkMode(!isDarkMode)}>
+                            {isDarkMode ? <LuSun /> : <LuMoon />}
                         </span>
                     </nav>
                 </nav>

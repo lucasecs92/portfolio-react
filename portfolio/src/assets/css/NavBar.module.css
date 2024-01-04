@@ -81,10 +81,24 @@
 .closeIcon {
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 15px;
     font-size: 1.5rem;
     color: var(--light);
     cursor: pointer;
+}
+
+/*  DARK MODE   */
+.darkMode {
+    background-color: var(--darkMode);
+    color: var(--light);
+}
+
+.darkMode .navRightUl li a {
+    color: var(--light);
+}
+
+.darkMode .burgerIcon svg, .darkMode .modeIcon svg {
+    color: var(--light);
 }
 
 @media (max-width: 710px) {

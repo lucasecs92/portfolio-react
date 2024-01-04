@@ -10,7 +10,7 @@ const Home = () => {
             <section className={styles.containerHome}>
                 <section className={styles.description}>
                     <article className={styles.descriptionText}>
-                        <p className={styles.greeting}>{"OLÁ!"}</p>
+                        <p className={styles.greeting}>{"Olá!"}</p>
                         <h3>Me chamo</h3>
                         <h1>LUCAS EDUARDO</h1>
                         <p className={styles.smallDescription}>
