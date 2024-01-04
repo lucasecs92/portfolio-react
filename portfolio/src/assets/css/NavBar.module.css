@@ -89,7 +89,7 @@
 
 /*  DARK MODE   */
 .darkMode {
-    background-color: var(--darkMode);
+    background-color: var(--dark);
     color: var(--light);
 }
 

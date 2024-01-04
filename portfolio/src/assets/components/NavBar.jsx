@@ -1,12 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import styles from '../css/NavBar.module.css';
 import { LuMoon, LuSun } from "react-icons/lu";
 import { FaBars, FaTimes } from "react-icons/fa";
+import ThemeContext from '../../contexts/ThemeContext';
 
 const NavBar = () => {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 710);
     const [showMenu, setShowMenu] = useState(false);
     const [isDarkMode, setIsDarkMode] = useState(false);
+
+    const themeContext = useContext(ThemeContext);
+
+    const toggleDarkMode = () => {
+        setIsDarkMode(!isDarkMode);
+        themeContext.setTheme(!isDarkMode ? 'dark' : 'light');
+    };
 
     useEffect(() => {
         const handleResize = () => {
@@ -57,7 +65,7 @@ const NavBar = () => {
                                 </li>
                             </ul>
                         )}
-                        <span className={styles.modeIcon} onClick={() => setIsDarkMode(!isDarkMode)}>
+                        <span className={styles.modeIcon} onClick={toggleDarkMode}>
                             {isDarkMode ? <LuSun /> : <LuMoon />}
                         </span>
                     </nav>

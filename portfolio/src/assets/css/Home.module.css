@@ -86,11 +86,14 @@
 }
 
 /* DARK MODE */
-
 .darkMode {
     background-color: var(--darkMode);
     color: var(--light);
- }
+}
+
+.darkMode .smallDescription {
+    color: var(--light);
+}
 
 @media (max-width: 935px) {
     .descriptionText h1 {
