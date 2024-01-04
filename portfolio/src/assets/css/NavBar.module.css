@@ -90,7 +90,7 @@
 /*  DARK MODE   */
 .darkMode {
     background-color: var(--dark);
-    color: var(--light);
+    color: var(--lightMode);
 }
 
 .darkMode .navRightUl li a {

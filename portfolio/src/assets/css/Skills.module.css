@@ -43,6 +43,18 @@
     line-height: 1.6;
 }
 
+/* DARK MODE */
+
+.darkMode {
+    background-color: var(--dark);
+    color: var(--lightMode);
+}
+
+.darkMode .techItems {
+    border-color: var(--lightMode);
+}   
+
+
 @media (max-width: 946px) {
     .containerSkills {
         padding: 4rem 5.5rem;

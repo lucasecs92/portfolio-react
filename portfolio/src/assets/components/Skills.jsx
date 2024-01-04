@@ -3,13 +3,15 @@ import styles from '../css/Skills.module.css';
 import { FaCss3Alt, FaGitAlt, FaHtml5, FaLinux, FaReact } from "react-icons/fa";
 import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
 import { TbBrandVscode } from "react-icons/tb";
-
+import ThemeContext from '../../contexts/ThemeContext';
+import { useContext } from 'react';
 
 const Skills = () => {
+    const themeContext = useContext(ThemeContext);
 
     return (    
         <>
-            <section className={styles.containerSkills}>
+            <section className={`${styles.containerSkills} ${themeContext.theme === 'dark' ? styles.darkMode : ''}`}>
 
                 <div className={styles.title}>
                     <h2>Skills</h2>

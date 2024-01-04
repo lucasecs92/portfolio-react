@@ -1,9 +1,12 @@
 import styles from '../css/Contact.module.css';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import emailjs from 'emailjs-com';
+import ThemeContext from '../../contexts/ThemeContext';
 
 const Contact = () => {
-    const [form, setForm] = useState({ nname: '', nemail: '', nmsg: '' });
+    const themeContext = useContext(ThemeContext);
+
+    const [form, setForm] = useState({ name: '', email: '', msg: '' });
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
@@ -23,7 +26,7 @@ const Contact = () => {
 
     return (
         <>
-            <section className={styles.containerContact}>
+            <section className={`${styles.containerContact} ${themeContext.theme === 'dark' ? styles.darkMode : ''}`}>
                 <section className={styles.contactWrap}>
                     <h1>MEU CONTATO</h1>
                     <h3>Contate-me Aqui</h3>

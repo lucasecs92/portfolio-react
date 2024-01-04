@@ -15,6 +15,17 @@
     color: var(--dark);
 }
 
+/* DARK MODE */
+.darkMode {
+    background-color: var(--dark);
+    color: var(--lightMode);
+}
+
+.darkMode .socialItem {
+    border-color: var(--lightMode);
+    color: var(--lightMode);
+}
+
 @media (max-width: 500px) {
     
     .footer {
