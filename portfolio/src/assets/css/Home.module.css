@@ -96,7 +96,9 @@
 }
 
 .darkMode .socialList li a{
-    background-color: var(--lightMode);
+    border-color: var(--lightMode);
+    background-color: var(--darkMode);
+    color: var(--lightMode);
 }
 
 @media (max-width: 935px) {
