@@ -87,7 +87,7 @@
     cursor: pointer;
 }
 
-/*  DARK MODE   */
+/* DARK MODE */
 .darkMode {
     background-color: var(--darkMode);
     color: var(--lightMode);

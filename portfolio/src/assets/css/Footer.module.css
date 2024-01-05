@@ -27,6 +27,11 @@
 }
 
 @media (max-width: 500px) {
+
+    .containerFooter {
+        display: block;
+        text-align: center;
+    }
     
     .footer {
         height: 20vh;
@@ -34,11 +39,17 @@
     }
 
     .footerInfo {
-        padding-bottom: 1rem;
+        padding-top: 1rem;
     }
 
     .socialIcons {
         padding-top: 1rem;
+    }
+
+    .socialItem {
+        padding: 0 10px;
+        border: none;
+        font-size: 1.2rem;
     }
 }
 

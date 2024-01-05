@@ -6,6 +6,7 @@ import Home from './assets/components/Home';
 import Skills from './assets/components/Skills';
 import Contact from './assets/components/Contact';
 import Footer from './assets/components/Footer';
+
 import { useState } from 'react';
 import ThemeContext from './contexts/ThemeContext';
 

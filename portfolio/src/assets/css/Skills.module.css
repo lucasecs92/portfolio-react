@@ -72,6 +72,7 @@
         height: auto;
         flex-wrap: wrap;
         justify-content: space-between;
+        margin: 2rem;
     }
 
     .techItems {
@@ -83,6 +84,10 @@
 
     .skillsInfo p {
         padding: 0rem 0.2rem;
+    }
+
+    .techIcons {
+        margin: 1rem;
     }
 
     .techItems {
