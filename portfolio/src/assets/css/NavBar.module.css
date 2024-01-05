@@ -1,5 +1,7 @@
 .containerNavBar {
     background-color: var(--light);
+    position: fixed;
+    width: 100%;
 }
 
 .navBarMain {
