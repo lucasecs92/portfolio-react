@@ -1,5 +1,5 @@
 .containerNavBar {
-    background-color: var(--lightMode);
+    background-color: var(--light);
 }
 
 .navBarMain {
@@ -89,7 +89,7 @@
 
 /*  DARK MODE   */
 .darkMode {
-    background-color: var(--dark);
+    background-color: var(--darkMode);
     color: var(--lightMode);
 }
 
