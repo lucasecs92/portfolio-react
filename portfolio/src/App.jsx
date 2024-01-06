@@ -4,6 +4,7 @@ import './assets/css/global.module.css'
 import NavBar from './assets/components/NavBar';
 import Home from './assets/components/Home';
 import Skills from './assets/components/Skills';
+import Projects from './assets/components/Projects';
 import Contact from './assets/components/Contact';
 import Footer from './assets/components/Footer';
 
@@ -22,6 +23,7 @@ function App() {
               <main>
                  <Home />
                  <Skills/>
+                 <Projects/>
                  <Contact/>
               </main>
               <footer>

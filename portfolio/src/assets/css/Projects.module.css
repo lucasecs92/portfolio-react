@@ -1,0 +1,59 @@
+
+.containerProjects {
+    padding: 6rem;
+    color: var(--dark);
+}
+
+.title {
+    font-size: 2.5rem;
+}
+
+.projects {
+    padding: 3rem 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.projectsWrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.projectsWrapReverse {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.projects aside {
+    width: 55%;
+    padding: 5rem 0;
+}
+
+.projectName {
+    font-size: 1.5rem;
+}
+
+.projectDescription {
+    font-size: 1.2rem;
+    padding: 1.5rem 0 3rem 0;
+}
+
+.projectBtn {
+    border: 1px solid var(--dark);
+    padding: 12px;
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.projectImg {
+    padding: 5rem 0;
+}
+
+.projectImg img {
+    border: 2px solid var(--dark); 
+    border-radius: 10px;
+    display: block;
+    background-attachment: fixed;
+    width: 30vw;
+}
