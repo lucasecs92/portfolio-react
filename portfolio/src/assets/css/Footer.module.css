@@ -5,6 +5,8 @@
     justify-content: space-around;
     align-items: center;
     color: var(--dark);
+    justify-content: space-between;
+    padding: 0 50px;
 }
 
 .socialItem {
