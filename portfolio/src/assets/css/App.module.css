@@ -1,11 +1,31 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    background: var(--light);
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: var(--lightMode);
+}
+ 
+::-webkit-scrollbar-thumb:hover {
+    background: var(--darkMode);
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: none;
 }
 
 body {
     background-color: var(--light);
+    overflow-x: hidden;
 }
 
+html {
+    -ms-overflow-style: none;
+}

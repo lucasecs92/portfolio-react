@@ -110,6 +110,7 @@
 
     .description {
         height: 80vh;
+        width: auto;
     } 
 
     .descriptionText {

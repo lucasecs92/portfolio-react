@@ -11,10 +11,6 @@ import { motion } from 'framer-motion';
 
 const Projects = () => {
 
-//    const [ref, inView] = useInView({
-//        triggerOnce: false, 
-//    });
-
    const [ref1, inView1] = useInView();
    const [ref2, inView2] = useInView();
    const [ref3, inView3] = useInView();
@@ -77,12 +73,12 @@ const Projects = () => {
                               <p className={styles.projectDescription}>
                                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis officia fugiat est consectetur aliquam eligendi qui provident esse, laudantium repellendus dicta commodi ut nihil quasi, repellat quaerat, temporibus sed corrupti!
                               </p>
-                              <a className={styles.projectBtn} href="#">
+                              <a className={styles.projectBtnReverse} href="#">
                                  Visit Website
                               </a>
                           </motion.aside>
 
-                          <motion.figure ref={refImg2} animate={inViewImg2 ? "show" : "hidden"} variants={variants} className={styles.projectImg}>
+                          <motion.figure ref={refImg2} animate={inViewImg2 ? "show" : "hidden"} variants={variants} className={styles.projectImgReverse}>
                               <img src={projeto2} alt="imagem de capa do projeto" />
                           </motion.figure>
                       </section>
