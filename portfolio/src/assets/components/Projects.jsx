@@ -3,7 +3,7 @@ import styles from '../css/Projects.module.css';
 import ThemeContext from '../../contexts/ThemeContext';
 
 import projeto1 from '../images/bookstore.png';
-import projeto2 from '../images/print-jujutsu.png';
+import projeto2 from '../images/weather.png';
 import projeto3 from '../images/print-jujutsu.png';
 
 import { useInView } from 'react-intersection-observer';
@@ -69,11 +69,11 @@ const Projects = () => {
 
                       <section className={styles.projectsWrapReverse}>
                           <motion.aside ref={ref2} animate={inView2 ? imgVariants.show : imgVariants.hidden} variants={imgVariants} className={styles.project2}>
-                              <h4 className={styles.projectName}>Project Name</h4>
+                              <h4 className={styles.projectName}>Weather App</h4>
                               <p className={styles.projectDescription}>
                                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis officia fugiat est consectetur aliquam eligendi qui provident esse, laudantium repellendus dicta commodi ut nihil quasi, repellat quaerat, temporibus sed corrupti!
                               </p>
-                              <a className={styles.projectBtnReverse} href="#">
+                              <a className={styles.projectBtnReverse} href="https://weather-navy-xi.vercel.app/" target='_blank' rel='noopener noreferrer'>
                                  Visit Website
                               </a>
                           </motion.aside>
@@ -85,7 +85,7 @@ const Projects = () => {
 
                       <section className={styles.projectsWrap}>
                         <motion.aside ref={ref3} animate={inView3 ? variants.show : variants.hidden} variants={variants} className={styles.project3}>
-                              <h4 className={styles.projectName}>Project Name</h4>
+                              <h4 className={styles.projectName}>To Do List</h4>
                               <p className={styles.projectDescription}>
                                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis officia fugiat est consectetur aliquam eligendi qui provident esse, laudantium repellendus dicta commodi ut nihil quasi, repellat quaerat, temporibus sed corrupti!
                               </p>
