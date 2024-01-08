@@ -15,8 +15,8 @@ const Footer = () => {
                     <p>Created by Lucas Eduardo C. De Sousa.</p>
                 </section>
                 <section className={styles.socialIcons}>
-                    <a className={styles.socialItem} href="#"><BiLogoLinkedin/></a>
-                    <a className={styles.socialItem} href="#"><FiGithub/></a>
+                    <a className={styles.socialItem} href="https://www.linkedin.com/in/lucas-eduardo-cavalcante/" target='_blank' rel='noopener noreferrer'><BiLogoLinkedin/></a>
+                    <a className={styles.socialItem} href="https://github.com/lucasecs92" target='_blank' rel='noopener noreferrer'><FiGithub/></a>
                 </section>
             </section>
         </>
