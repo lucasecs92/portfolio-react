@@ -72,11 +72,10 @@
 }
 
 .projectImg img, .projectImgReverse img {
-    border: 2px solid var(--dark); 
+    border: 2px solid var(--dark);
     border-radius: 10px;
     display: block;
     background-attachment: fixed;
-    /* width: 30vw; */
     width: 370px;
 }
 
