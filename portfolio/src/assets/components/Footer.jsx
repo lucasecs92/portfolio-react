@@ -12,7 +12,7 @@ const Footer = () => {
         <>
             <section className={`${styles.containerFooter} ${themeContext.theme === 'dark' ? styles.darkMode : ''}`}>
                 <section className={styles.footerInfo}>
-                    <p>Created by Lucas Eduardo C. De Sousa.</p>
+                    <p>Created by <span>Lucas Eduardo</span>.</p>
                 </section>
                 <section className={styles.socialIcons}>
                     <a className={styles.socialItem} href="https://www.linkedin.com/in/lucas-eduardo-cavalcante/" target='_blank' rel='noopener noreferrer'><BiLogoLinkedin/></a>

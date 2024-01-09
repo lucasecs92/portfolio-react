@@ -69,7 +69,7 @@ const Projects = () => {
 
                         <section className={styles.projectsWrapReverse}>
                             <motion.aside ref={ref2} animate={inView2 ? imgVariants.show : imgVariants.hidden} variants={imgVariants} className={styles.project2}>
-                                <h4 className={styles.projectName}>Weather App</h4>
+                                <h4 className={styles.projectName}>Weather</h4>
                                 <p className={styles.projectDescription}>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis officia fugiat est consectetur aliquam eligendi qui provident esse, laudantium repellendus dicta commodi ut nihil quasi, repellat quaerat, temporibus sed corrupti!
                                 </p>
