@@ -1,4 +1,3 @@
-
 .containerProjects {
     padding: 3rem 6rem;
     color: var(--dark);
@@ -25,9 +24,11 @@
     justify-content: space-between;
 }
 
-.projects aside {
-    width: 55%;
-    padding: 5rem 0;
+.projects .project1,
+.projects .project3 {
+    /* width: 55%; */
+    width: 100%;
+    padding: 5rem 5rem 5rem 0;
 }
 
 .projectName {
@@ -39,36 +40,42 @@
     padding: 1.5rem 0 3rem 0;
 }
 
-.projectBtn {
+.projectBtn , 
+.projectBtnReverse {
     border: 1px solid var(--dark);
+    border-radius: 5px;
     padding: 12px 24px;
     text-decoration: none;
     color: var(--dark);
+    transition: all 0.2s linear 0s;
 }
 
-.project2 {
+.projectBtn:hover , 
+.projectBtnReverse:hover {
+    background-color: var(--darkMode);
+    color: var(--light);
+}
+
+.projects .project2 {
     text-align: end;
+    width: 100%;
+    padding: 5rem 0 5rem 5rem;
 }
 
 .project2 .projectDescription {
     text-align: justify;
 }
 
-.projectBtnReverse {
-    border: 1px solid var(--dark);
-    padding: 12px 24px;
-    text-decoration: none;
-    color: var(--dark);
-}
-
 .projectImg {
     padding: 5rem 0;
     margin-left: 20px;
+    width: 70%;
 }
 
 .projectImgReverse {
     padding: 5rem 0;
     margin-right: 20px;
+    width: 70%;
 }
 
 .projectImg img, .projectImgReverse img {
@@ -76,7 +83,26 @@
     border-radius: 10px;
     display: block;
     background-attachment: fixed;
-    width: 370px;
+    width: 100%;
+    /* width: 370px; */
+}
+
+/* DARK MODE */
+.darkMode {
+    background-color: var(--darkMode);
+    color: var(--lightMode);
+}
+
+.darkMode .projectBtn ,
+.darkMode .projectBtnReverse {
+    color: var(--lightMode);
+    border-color: var(--lightMode);
+}
+
+.darkMode .projectBtn:hover , 
+.darkMode .projectBtnReverse:hover {
+    background-color: var(--lightMode);
+    color: var(--darkMode);
 }
 
 @media (max-width: 946px) {

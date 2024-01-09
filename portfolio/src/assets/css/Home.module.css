@@ -79,6 +79,7 @@
     border: 0.5px solid #ccc;
     box-shadow: 0 4px 6px 0 #777;
     font-size: 1.2rem;
+    transition: all 0.2s linear 0s;
 }
 .socialList li a:hover {
     box-shadow: 0 2px 15px 0 var(--dark);
@@ -98,6 +99,11 @@
     border-color: var(--lightMode);
     background-color: var(--darkMode);
     color: var(--lightMode);
+}
+
+.darkMode .socialList li a:hover {
+    background-color: var(--lightMode);
+    color: var(--darkMode);
 }
 
 @media (max-width: 935px) {
