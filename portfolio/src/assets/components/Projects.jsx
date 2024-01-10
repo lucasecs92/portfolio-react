@@ -10,6 +10,8 @@ import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { useContext } from 'react';
 
+import { FiGithub } from "react-icons/fi";
+
 const Projects = () => {
 
     const themeContext = useContext(ThemeContext);
@@ -58,12 +60,20 @@ const Projects = () => {
                             <section className={styles.projectsWrap}>
                                 <motion.aside ref={ref1} animate={inView1 ? variants.show : variants.hidden} variants={variants} className={styles.project1}>
                                     <h4 className={styles.projectName}>Book Store</h4>
+                                    <ul className={styles.projectStack}>
+                                        <li>JavaScript</li>
+                                        <li>React</li>
+                                    </ul>
                                     <p className={styles.projectDescription}>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis officia fugiat est consectetur aliquam eligendi qui provident esse, laudantium repellendus dicta commodi ut nihil quasi, repellat quaerat, temporibus sed corrupti!
                                     </p>
-                                    <a className={styles.projectBtn} href="https://book-store-rho-ten.vercel.app/" target='_blank' rel='noopener noreferrer'>
-                                        Visualizar Website
-                                    </a>
+
+                                    <div className={styles.projectLinksWrap}>
+                                        <a className={styles.projectBtn} href="https://book-store-rho-ten.vercel.app/" target='_blank' rel='noopener noreferrer'>
+                                            Visualizar Website
+                                        </a>
+                                        <a href="https://github.com/lucasecs92/book-store-react" target="_blank" rel="noopener noreferrer" className={styles.githubIcon}><FiGithub/></a>
+                                    </div>
                                 </motion.aside>
                                 <motion.figure ref={refImg1} animate={inViewImg1 ? "show" : "hidden"} variants={imgVariants} className={styles.projectImg}>
                                     <img src={projeto1} alt="imagem de capa do bookstore" />
@@ -76,9 +86,13 @@ const Projects = () => {
                                     <p className={styles.projectDescription}>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis officia fugiat est consectetur aliquam eligendi qui provident esse, laudantium repellendus dicta commodi ut nihil quasi, repellat quaerat, temporibus sed corrupti!
                                     </p>
-                                    <a className={styles.projectBtnReverse} href="https://weather-navy-xi.vercel.app/" target='_blank' rel='noopener noreferrer'>
-                                        Visualizar Website
-                                    </a>
+
+                                    <div className={styles.projectLinksWrapReverse}>
+                                        <a href="https://github.com/lucasecs92/weather-react/tree/main/weather" target="_blank" rel="noopener noreferrer" className={styles.githubIcon}><FiGithub/></a>
+                                        <a className={styles.projectBtnReverse} href="https://weather-navy-xi.vercel.app/" target='_blank' rel='noopener noreferrer'>
+                                            Visualizar Website
+                                        </a>
+                                    </div>
                                 </motion.aside>
 
                                 <motion.figure ref={refImg2} animate={inViewImg2 ? "show" : "hidden"} variants={variants} className={styles.projectImgReverse}>
@@ -92,9 +106,13 @@ const Projects = () => {
                                     <p className={styles.projectDescription}>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis officia fugiat est consectetur aliquam eligendi qui provident esse, laudantium repellendus dicta commodi ut nihil quasi, repellat quaerat, temporibus sed corrupti!
                                     </p>
-                                    <a className={styles.projectBtn} href="https://todolist-bay-five.vercel.app/" target='_blank' rel='noopener noreferrer'>
-                                        Visualizar Website
-                                    </a>
+
+                                    <div className={styles.projectLinksWrap}>
+                                        <a className={styles.projectBtn} href="https://todolist-bay-five.vercel.app/" target='_blank' rel='noopener noreferrer'>
+                                            Visualizar Website
+                                        </a>
+                                        <a href="https://github.com/lucasecs92/to-do-list/tree/main/todolist" target="_blank" rel="noopener noreferrer" className={styles.githubIcon}><FiGithub/></a>
+                                    </div>
                                 </motion.aside>
                                 <motion.figure ref={refImg3} animate={inViewImg3 ? "show" : "hidden"} variants={imgVariants} className={styles.projectImg}>
                                     <img src={projeto3} alt="imagem de capa do projeto" />

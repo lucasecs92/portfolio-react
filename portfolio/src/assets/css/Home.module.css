@@ -6,9 +6,9 @@
 
 .description {
     display: flex;
-    width: 75vw;
+    width: 100vw;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: auto;
 }
 

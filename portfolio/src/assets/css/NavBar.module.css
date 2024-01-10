@@ -10,7 +10,8 @@
     align-items: stretch;
     justify-content: space-between;
     width: 100%;
-    padding: 1rem 7rem;
+    padding: 1rem 5rem;
+    font-size: 1.3rem;
 }
 
 .navLeft {
