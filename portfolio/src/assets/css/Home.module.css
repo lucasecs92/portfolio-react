@@ -81,6 +81,7 @@
     box-shadow: 0 4px 6px 0 #777;
     font-size: 1.2rem;
     transition: all 0.2s linear 0s;
+    font-family: none;
 }
 .socialList li a:hover {
     box-shadow: 0 2px 15px 0 var(--dark);

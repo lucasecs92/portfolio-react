@@ -31,10 +31,7 @@
     list-style: none;
     display: flex;
     align-items: center;
-}
-
-.navRightUl li {
-    padding: 0 1rem;
+    gap: 2rem;
 }
 
 .navRightUl li a {
