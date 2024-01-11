@@ -61,8 +61,9 @@ const Projects = () => {
                                 <motion.aside ref={ref1} animate={inView1 ? variants.show : variants.hidden} variants={variants} className={styles.project1}>
                                     <h4 className={styles.projectName}>Book Store</h4>
                                     <ul className={styles.projectStack}>
-                                        <li>JavaScript</li>
                                         <li>React</li>
+                                        <li>JavaScript</li>
+                                        <li>CSS</li>
                                     </ul>
                                     <p className={styles.projectDescription}>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis officia fugiat est consectetur aliquam eligendi qui provident esse, laudantium repellendus dicta commodi ut nihil quasi, repellat quaerat, temporibus sed corrupti!
@@ -72,7 +73,7 @@ const Projects = () => {
                                         <a className={styles.projectBtn} href="https://book-store-rho-ten.vercel.app/" target='_blank' rel='noopener noreferrer'>
                                             Visualizar Website
                                         </a>
-                                        <a href="https://github.com/lucasecs92/book-store-react" target="_blank" rel="noopener noreferrer" className={styles.githubIcon}><FiGithub/></a>
+                                        <a href="https://github.com/lucasecs92/book-store-react/tree/main/book-store" target="_blank" rel="noopener noreferrer" className={styles.githubIcon}><FiGithub/></a>
                                     </div>
                                 </motion.aside>
                                 <motion.figure ref={refImg1} animate={inViewImg1 ? "show" : "hidden"} variants={imgVariants} className={styles.projectImg}>
@@ -83,6 +84,11 @@ const Projects = () => {
                             <section className={styles.projectsWrapReverse}>
                                 <motion.aside ref={ref2} animate={inView2 ? imgVariants.show : imgVariants.hidden} variants={imgVariants} className={styles.project2}>
                                     <h4 className={styles.projectName}>Weather</h4>
+                                    <ul className={styles.projectStackReverse}>
+                                        <li>JavaScript</li>
+                                        <li>React</li>
+                                        <li>CSS</li>
+                                    </ul>
                                     <p className={styles.projectDescription}>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis officia fugiat est consectetur aliquam eligendi qui provident esse, laudantium repellendus dicta commodi ut nihil quasi, repellat quaerat, temporibus sed corrupti!
                                     </p>
@@ -103,6 +109,11 @@ const Projects = () => {
                             <section className={styles.projectsWrap}>
                                 <motion.aside ref={ref3} animate={inView3 ? variants.show : variants.hidden} variants={variants} className={styles.project3}>
                                     <h4 className={styles.projectName}>To Do List</h4>
+                                    <ul className={styles.projectStack}>
+                                        <li>TypeScript</li>
+                                        <li>React</li>
+                                        <li>CSS</li>
+                                    </ul>
                                     <p className={styles.projectDescription}>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis officia fugiat est consectetur aliquam eligendi qui provident esse, laudantium repellendus dicta commodi ut nihil quasi, repellat quaerat, temporibus sed corrupti!
                                     </p>

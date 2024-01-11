@@ -4,7 +4,9 @@ import { LuMoon, LuSun } from "react-icons/lu";
 import { FaBars, FaTimes } from "react-icons/fa";
 import ThemeContext from '../../contexts/ThemeContext';
 
-const NavBar = () => {
+import PropTypes from 'prop-types';
+
+const NavBar = ({ homeRef, skillsRef, projectsRef, contactRef }) => {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 710);
     const [showMenu, setShowMenu] = useState(false);
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -39,6 +41,20 @@ const NavBar = () => {
         setShowMenu(!showMenu);
     }
 
+    const scrollToRef = (ref) => {
+        // Fecha o menu móvel se estiver aberto
+        if (showMenu) {
+            setShowMenu(false);
+        }
+
+        // Aguarda o fechamento do menu antes de rolar
+        setTimeout(() => {
+            if (ref && ref.current) {
+            ref.current.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 0);
+    };
+
     return (
         <>
             <section className={`${styles.containerNavBar} ${isDarkMode ? styles.darkMode : ''}`}>
@@ -55,13 +71,16 @@ const NavBar = () => {
                         ) : (
                             <ul className={styles.navRightUl}>
                                 <li>
-                                    <a href="#">Home</a>
+                                    <a href="#" onClick={() => scrollToRef(homeRef)}>Home</a>
                                 </li>
                                 <li>
-                                    <a href="#">Projetos</a>
+                                    <a href="#" onClick={() => scrollToRef(skillsRef)}>Skills</a>
                                 </li>
                                 <li>
-                                    <a href="#">Contato</a>
+                                    <a href="#" onClick={() => scrollToRef(projectsRef)}>Projetos</a>
+                                </li>
+                                <li>
+                                    <a href="#" onClick={() => scrollToRef(contactRef)}>Contato</a>
                                 </li>
                             </ul>
                         )}
@@ -79,13 +98,16 @@ const NavBar = () => {
                     </span>
                     <ul className={styles.menuList}>
                         <li>
-                            <a href="#">Home</a>
+                            <a href="#" onClick={() => scrollToRef(homeRef)}>Home</a>
                         </li>
                         <li>
-                            <a href="#">Projetos</a>
+                            <a href="#" onClick={() => scrollToRef(skillsRef)}>Skills</a>
                         </li>
                         <li>
-                            <a href="#">Contato</a>
+                            <a href="#" onClick={() => scrollToRef(projectsRef)}>Projetos</a>
+                        </li>
+                        <li>
+                            <a href="#" onClick={() => scrollToRef(contactRef)}>Contato</a>
                         </li>
                     </ul>
                 </div>
@@ -93,5 +115,24 @@ const NavBar = () => {
         </>
     )
 }
+
+NavBar.propTypes = {
+    homeRef: PropTypes.oneOfType([
+      PropTypes.func, 
+      PropTypes.shape({ current: PropTypes.instanceOf(Element) })
+    ]),
+    skillsRef: PropTypes.oneOfType([
+      PropTypes.func, 
+      PropTypes.shape({ current: PropTypes.instanceOf(Element) })
+    ]),
+    projectsRef: PropTypes.oneOfType([
+      PropTypes.func, 
+      PropTypes.shape({ current: PropTypes.instanceOf(Element) })
+    ]),
+    contactRef: PropTypes.oneOfType([
+      PropTypes.func, 
+      PropTypes.shape({ current: PropTypes.instanceOf(Element) })
+    ]),
+};
 
 export default NavBar;

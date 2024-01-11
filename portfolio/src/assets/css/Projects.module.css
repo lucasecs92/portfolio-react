@@ -16,18 +16,24 @@
 .projectsWrap {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 7rem;
+    padding: 5rem 0;
 }
 
 .projectsWrapReverse {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
+    gap: 7rem;
+    padding: 5rem 0;
 }
 
 .projects .project1,
 .projects .project3 {
     width: 100%;
-    padding: 5rem 5rem 5rem 0;
+    /* padding: 5rem 5rem 5rem 0; */
 }
 
 .projectName {
@@ -49,9 +55,24 @@
 
 }
 
+.projectStackReverse {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: flex-end;
+}
+
+.projectStackReverse li {
+    border: 1px solid var(--darkMode);
+    border-radius: 15px;
+    padding: 0.5rem 0.8rem;
+}
+
 .projectDescription {
-    font-size: 1.2rem;
     padding: 1.5rem 0;
+    line-height: 1.5;
 }
 
 .projectLinksWrap {
@@ -71,7 +92,7 @@
 .projectBtnReverse {
     border: 1px solid var(--dark);
     border-radius: 5px;
-    padding: 12px 24px;
+    padding: 18px 30px;
     text-decoration: none;
     color: var(--dark);
     transition: all 0.2s linear 0s;
@@ -88,10 +109,9 @@
     color: var(--darkMode);
 }
 
-.projects .project2 {
+.project2 {
     text-align: end;
     width: 100%;
-    padding: 5rem 0 5rem 5rem;
 }
 
 .project2 .projectDescription {
@@ -100,14 +120,12 @@
 
 .projectImg {
     padding: 5rem 0;
-    margin-left: 20px;
-    width: 70%;
+    width: 100%;
 }
 
 .projectImgReverse {
     padding: 5rem 0;
-    margin-right: 20px;
-    width: 70%;
+    width: 100%;
 }
 
 .projectImg img, .projectImgReverse img {
@@ -116,6 +134,7 @@
     display: block;
     background-attachment: fixed;
     width: 100%;
+    height: 330px;
     /* width: 370px; */
 }
 
@@ -145,11 +164,23 @@
     color: var(--lightMode);
 }
 
-.darkMode .projectStack li {
+.darkMode .projectStack li, .darkMode .projectStackReverse li {
     border-color: var(--lightMode);
 }
 
-@media (max-width: 946px) {
+@media (max-width: 1195px) {
+    .projectImg img, .projectImgReverse img {
+        height: auto;
+    }
+}
+
+@media (max-width: 1115px) {
+    .projectsWrap, .projectsWrapReverse {
+        gap: 5rem;
+    }
+}
+
+@media (max-width: 956px) {
 
     .title {
         text-align: center;
@@ -157,8 +188,24 @@
 
     .projectsWrap, .projectsWrapReverse{
         flex-direction: column;
+        gap: 1rem;
     }
-    .projects aside {
+
+    .projectStack, .projectStackReverse {
+        justify-content: center;
+    }
+
+    .projectLinksWrap {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .projectLinksWrapReverse {
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+
+    .project1, .project2, .project3 {
         width: auto;
         padding-bottom: 0;
         text-align: center;
@@ -169,11 +216,12 @@
     }
 
     .projectImg {
-        padding: 3rem 0;
+        padding: 1rem 0 0 0;
         margin-left: auto;
     }
 
     .projectImgReverse {
+        padding: 1rem 0 0 0;
         margin-right: auto;
     }
 
@@ -181,4 +229,11 @@
         width: 100%;
     }
 
+}
+
+@media (max-width: 500px) {
+    
+    .containerProjects {
+        padding: 3rem;
+    }
 }

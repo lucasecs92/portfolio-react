@@ -8,23 +8,28 @@ import Projects from './assets/components/Projects';
 import Contact from './assets/components/Contact';
 import Footer from './assets/components/Footer';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import ThemeContext from './contexts/ThemeContext';
 
 function App() {
   const [theme, setTheme] = useState('light');
-
+  
+  const homeRef = useRef(null);
+  const skillsRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+  
   return (
       <ThemeContext.Provider value={{ theme, setTheme }}>
           <section className={styles.containerPortfolio}>
               <header>
-                 <NavBar/>
+                 <NavBar homeRef={homeRef} skillsRef={skillsRef} projectsRef={projectsRef} contactRef={contactRef} />
               </header>
               <main>
-                 <Home />
-                 <Skills/>
-                 <Projects/>
-                 <Contact/>
+                <div ref={homeRef}><Home /></div>
+                <div ref={skillsRef}><Skills/></div>
+                <div ref={projectsRef}><Projects/></div>
+                <div ref={contactRef}><Contact/></div>
               </main>
               <footer>
                  <Footer/>

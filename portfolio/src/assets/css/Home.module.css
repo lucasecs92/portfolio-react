@@ -16,11 +16,12 @@
     flex-basis: 40%;
     justify-content: center;
 }
+
 .mainPhoto img {
     width: 330px;
     height: 330px;
     margin: 100px 0;
-    border-radius: 50% 10%;
+    border-radius: 63% 37% 60% 40% / 38% 46% 54% 62%;
     object-fit: cover;
     z-index: -1;
     box-shadow: 4px 0 10px 0 #777, 8px 0 10px 0 #aaa, 12px 0 10px 0 #eee;
@@ -104,6 +105,26 @@
 .darkMode .socialList li a:hover {
     background-color: var(--lightMode);
     color: var(--darkMode);
+}
+
+@media (max-width: 1215px) {
+    .description {
+        width: auto;
+    }
+}
+
+@media (max-width: 1070px) {    
+    .description {
+        flex-direction: column;
+    }
+
+    .descriptionText {
+        padding: 0 3rem;
+    }
+
+    .mainPhoto {
+        display: none;
+    }
 }
 
 @media (max-width: 935px) {
