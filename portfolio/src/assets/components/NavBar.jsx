@@ -9,9 +9,8 @@ import PropTypes from 'prop-types';
 const NavBar = ({ homeRef, skillsRef, projectsRef, contactRef }) => {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 710);
     const [showMenu, setShowMenu] = useState(false);
-    const [isDarkMode, setIsDarkMode] = useState(false);
-
     const themeContext = useContext(ThemeContext);
+    const [isDarkMode, setIsDarkMode] = useState(themeContext.theme === 'dark');
 
     const toggleDarkMode = () => {
         setIsDarkMode(!isDarkMode);

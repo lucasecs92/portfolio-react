@@ -8,17 +8,21 @@ import Projects from './assets/components/Projects';
 import Contact from './assets/components/Contact';
 import Footer from './assets/components/Footer';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import ThemeContext from './contexts/ThemeContext';
 
 function App() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
   
   const homeRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
-  
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
   return (
       <ThemeContext.Provider value={{ theme, setTheme }}>
           <section className={styles.containerPortfolio}>
