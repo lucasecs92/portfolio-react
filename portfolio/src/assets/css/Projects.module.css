@@ -3,8 +3,12 @@
     color: var(--dark);
 }
 
-.title {
-    font-size: 2.5rem;
+.projectHeader h4 {
+    font-size: 1.5rem;
+}
+
+.projectHeader h2 {
+    font-size: 3rem;
 }
 
 .projects {
@@ -182,7 +186,7 @@
 
 @media (max-width: 956px) {
 
-    .title {
+    .projectHeader {
         text-align: center;
     }
 

@@ -40,6 +40,8 @@
 .navRightUl li a {
     text-decoration: none;
     color: var(--dark);
+    font-size: 1.1rem;
+    cursor: pointer;
 }
 
 .modeIcon {

@@ -15,7 +15,7 @@ const Skills = () => {
             <section className={`${styles.containerSkills} ${themeContext.theme === 'dark' ? styles.darkMode : ''}`}>
 
                 <section className={styles.title}>
-                    <h2>Skills</h2>
+                    <h2>Minhas Skills</h2>
                 </section>
 
                 <ul className={styles.techIcons}>

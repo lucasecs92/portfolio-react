@@ -7,7 +7,7 @@ import ThemeContext from '../../contexts/ThemeContext';
 import PropTypes from 'prop-types';
 
 const NavBar = ({ homeRef, skillsRef, projectsRef, contactRef }) => {
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 710);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 975);
     const [showMenu, setShowMenu] = useState(false);
     const themeContext = useContext(ThemeContext);
     const [isDarkMode, setIsDarkMode] = useState(themeContext.theme === 'dark');
@@ -19,7 +19,7 @@ const NavBar = ({ homeRef, skillsRef, projectsRef, contactRef }) => {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 710);
+            setIsMobile(window.innerWidth <= 975);
         };
         window.addEventListener("resize", handleResize);
 
@@ -70,16 +70,16 @@ const NavBar = ({ homeRef, skillsRef, projectsRef, contactRef }) => {
                         ) : (
                             <ul className={styles.navRightUl}>
                                 <li>
-                                    <a href="#" onClick={() => scrollToRef(homeRef)}>Home</a>
+                                    <a onClick={() => scrollToRef(homeRef)}>Home</a>
                                 </li>
                                 <li>
-                                    <a href="#" onClick={() => scrollToRef(skillsRef)}>Skills</a>
+                                    <a onClick={() => scrollToRef(skillsRef)}>Skills</a>
                                 </li>
                                 <li>
-                                    <a href="#" onClick={() => scrollToRef(projectsRef)}>Projetos</a>
+                                    <a onClick={() => scrollToRef(projectsRef)}>Projetos</a>
                                 </li>
                                 <li>
-                                    <a href="#" onClick={() => scrollToRef(contactRef)}>Contato</a>
+                                    <a onClick={() => scrollToRef(contactRef)}>Contato</a>
                                 </li>
                             </ul>
                         )}
@@ -97,16 +97,16 @@ const NavBar = ({ homeRef, skillsRef, projectsRef, contactRef }) => {
                     </span>
                     <ul className={styles.menuList}>
                         <li>
-                            <a href="#" onClick={() => scrollToRef(homeRef)}>Home</a>
+                            <a onClick={() => scrollToRef(homeRef)}>Home</a>
                         </li>
                         <li>
-                            <a href="#" onClick={() => scrollToRef(skillsRef)}>Skills</a>
+                            <a onClick={() => scrollToRef(skillsRef)}>Skills</a>
                         </li>
                         <li>
-                            <a href="#" onClick={() => scrollToRef(projectsRef)}>Projetos</a>
+                            <a onClick={() => scrollToRef(projectsRef)}>Projetos</a>
                         </li>
                         <li>
-                            <a href="#" onClick={() => scrollToRef(contactRef)}>Contato</a>
+                            <a onClick={() => scrollToRef(contactRef)}>Contato</a>
                         </li>
                     </ul>
                 </div>

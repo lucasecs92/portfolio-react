@@ -52,8 +52,9 @@ const Projects = () => {
         <>
             <section className={`${styles.containerProjects} ${themeContext.theme === 'dark' ? styles.darkMode : ''}`}>
 
-                    <section className={styles.title}>
-                            <h3>Projetos</h3>
+                    <section className={styles.projectHeader}>
+                            <h4>MEUS PROJETOS</h4>
+                            <h2>O que eu desenvolvi</h2>
                     </section>
 
                     <section className={styles.projects}>
