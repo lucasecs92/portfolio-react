@@ -1,5 +1,4 @@
 .containerSkills {
-    /* height: 80vh; */
     background-color: var(--lightMode);
     display: flex;
     flex-direction: column;
@@ -30,8 +29,15 @@
     margin: 0 15px;
 }
 
+.infoWrap {
+    display: flex;
+    gap: 12rem;
+    padding: 3rem
+    6rem 0 6rem;
+}
+
 .skillsInfo {
-    padding-top: 2rem;
+    width: 50%;
 }
 
 .skillsInfo h4 {
@@ -41,6 +47,10 @@
 .skillsInfo p {
     font-size: 1.2rem;
     line-height: 1.6;
+}
+
+.qrCode img {
+    width: 50%;
 }
 
 /* DARK MODE */

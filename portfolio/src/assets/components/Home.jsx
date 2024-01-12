@@ -43,8 +43,8 @@ const Home = () => {
             <section className={`${styles.containerHome} ${themeContext.theme === 'dark' ? styles.darkMode : ''}`}>
                 <section className={styles.description}>
                     <motion.article ref={ref} animate={inView ? variants.show : variants.hidden} variants={variants} className={styles.descriptionText}>
-                        <p className={styles.greeting}>{"</> Olá Mundo!"}</p>
-                        <h3>Me chamo</h3>
+                        <p className={styles.greeting}>{"Olá Mundo! </>"}</p>
+                        <h3>Meu nome é</h3>
                         <h1>LUCAS EDUARDO</h1>
                         <p className={styles.smallDescription}>
                             Eu sou um <span>Desenvolvedor Front-end Junior</span> interessado em criar aplicações e experiências web interativas.

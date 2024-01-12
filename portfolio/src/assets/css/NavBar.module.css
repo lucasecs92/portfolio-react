@@ -42,7 +42,8 @@
 }
 
 .modeIcon {
-    padding-left: 15px;
+    padding-left: 30px;
+    padding-top: 8px;
 }
 
 .burgerIcon svg, .modeIcon svg {
