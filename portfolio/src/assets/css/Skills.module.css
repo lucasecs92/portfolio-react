@@ -2,13 +2,14 @@
     background-color: var(--lightMode);
     display: flex;
     flex-direction: column;
-    padding: 4rem 6.5rem;
+    /* padding: 4rem 6.5rem; */
     align-items: center;
     color: var(--dark);
+    padding: 3rem 6rem;
 }
 
 .title {
-    font-size: 2rem;
+    font-size: 1.2em;
     padding-bottom: 2rem;
 }
 
@@ -31,9 +32,9 @@
 
 .infoWrap {
     display: flex;
-    gap: 12rem;
+    gap: 9rem;
     padding: 3rem
-    6rem 0 6rem;
+    0;
 }
 
 .skillsInfo {
@@ -49,8 +50,25 @@
     line-height: 1.6;
 }
 
+.qrCode {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding-left: 5rem;
+}
+
 .qrCode img {
-    width: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.qrCode aside {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.qrCode aside p {
+    font-family: 'MinhaFonte', sans-serif;
 }
 
 /* DARK MODE */
@@ -64,7 +82,14 @@
     border-color: var(--lightMode);
 }   
 
+@media (max-width: 1200px) {
 
+    .infoWrap {
+        padding: 3rem 0rem 0rem 0rem;
+    }
+}
+
+ 
 @media (max-width: 946px) {
     .containerSkills {
         padding: 4rem 5.5rem;

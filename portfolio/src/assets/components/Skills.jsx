@@ -49,14 +49,19 @@ const Skills = () => {
 
                 <section className={styles.infoWrap}>
                     <aside className={styles.skillsInfo}>
-                        <h4>What I can do</h4>
+                        <h4>O que eu posso fazer</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, officiis adipisci quod dignissimos libero nemo quisquam iure. Hic error eos ut odio, quia placeat. Repellendus non reiciendis omnis veritatis est.
                         lorem.
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum reprehenderit quibusdam deleniti repellat. Iure, eveniet at non ducimus earum eum suscipit vitae assumenda praesentium. Beatae molestias asperiores laborum amet ut.
                         </p>
                     </aside>
                     <figure className={styles.qrCode}>
-                        <img src={qrCode} alt="QR Code do meu currículo" />
+                        <img src={qrCode} alt="QR Code do meu currículo"/>
+                        <aside>
+                            <p>Meu</p>
+                            <p>Curriculum</p>
+                            <p>Vitae</p>
+                        </aside>
                     </figure>
                 </section>
 
