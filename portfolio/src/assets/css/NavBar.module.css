@@ -15,6 +15,10 @@
 }
 
 .navLeft {
+    color: var(--darkMode);
+}
+
+.navLeft h3 span {
     color: var(--dark);
 }
 
@@ -96,6 +100,13 @@
     background-color: var(--darkMode);
     color: var(--lightMode);
 }
+.darkMode .navLeft h3 {
+    color: var(--light);
+}
+
+.darkMode .navLeft h3 span {
+    color: var(--lightMode);
+}
 
 .darkMode .navRightUl li a {
     color: var(--light);
@@ -103,6 +114,14 @@
 
 .darkMode .burgerIcon svg, .darkMode .modeIcon svg {
     color: var(--light);
+}
+
+
+@media (max-width: 975px) {
+
+    .modeIcon {
+        padding-top: 0;
+    }
 }
 
 @media (max-width: 710px) {

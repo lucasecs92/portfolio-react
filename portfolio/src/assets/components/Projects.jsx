@@ -30,7 +30,7 @@ const Projects = () => {
             opacity: 1,
             x: 0, 
             transition: {
-                duration: 2,
+                duration: 1.5,
                 ease: "easeOut",
             },
         },
@@ -42,7 +42,7 @@ const Projects = () => {
             opacity: 1,
             x: 0, 
             transition: {
-                duration: 2,
+                duration: 1.5,
                 ease: "easeOut",
             },
         },

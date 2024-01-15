@@ -20,7 +20,7 @@ const Home = () => {
             opacity: 1,
             x: 0,
             transition: {
-                duration: 2.5,
+                duration: 2,
                 ease: "easeOut",
             },
         },
@@ -32,7 +32,7 @@ const Home = () => {
             opacity: 1,
             x: 0, 
             transition: {
-                duration: 2.5,
+                duration: 2,
                 ease: "easeOut",
             },
         },
@@ -44,10 +44,9 @@ const Home = () => {
                 <section className={styles.description}>
                     <motion.article ref={ref} animate={inView ? variants.show : variants.hidden} variants={variants} className={styles.descriptionText}>
                         <p className={styles.greeting}>{"Olá Mundo! </>"}</p>
-                        <h3>Meu nome é</h3>
-                        <h1>LUCAS EDUARDO</h1>
+                        <h1><span>Eu sou</span> Lucas Eduardo</h1>
                         <p className={styles.smallDescription}>
-                            Eu sou um <span>Desenvolvedor Front-end Junior</span> interessado em criar aplicações e experiências web interativas.
+                            Um <span>Desenvolvedor Front-end Jr.</span> interessado em criar aplicações e experiências web interativas.
                         </p>
                         <section className={styles.socialMedia}>
                             <ul className={styles.socialList}>

@@ -59,7 +59,7 @@ const NavBar = ({ homeRef, skillsRef, projectsRef, contactRef }) => {
             <section className={`${styles.containerNavBar} ${isDarkMode ? styles.darkMode : ''}`}>
                 <nav className={styles.navBarMain}>
                     <nav className={styles.navLeft}>
-                        <h3 className={`${isDarkMode ? styles.darkMode : ''}`}>DevLucas</h3>
+                        <h3 className={`${isDarkMode ? styles.darkMode : ''}`}><span>Dev</span>Lucas</h3>
                     </nav>
 
                     <nav className={styles.navRight}>

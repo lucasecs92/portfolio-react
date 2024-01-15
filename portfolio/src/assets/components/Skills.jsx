@@ -50,9 +50,9 @@ const Skills = () => {
                 <section className={styles.infoWrap}>
                     <aside className={styles.skillsInfo}>
                         <h4>O que eu posso fazer</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, officiis adipisci quod dignissimos libero nemo quisquam iure. Hic error eos ut odio, quia placeat. Repellendus non reiciendis omnis veritatis est.
-                        lorem.
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum reprehenderit quibusdam deleniti repellat. Iure, eveniet at non ducimus earum eum suscipit vitae assumenda praesentium. Beatae molestias asperiores laborum amet ut.
+                        <p>
+                            Como desenvolvedor, tenho conhecimento em Javascript, React, HTML e CSS.
+                            Minha breve experiência e objetivo com o uso dessa stack é para construção de aplicações responsivas, dinâmicas, escaláveis e de fácil manutenção. Me permitindo criar um código eficiente e sustentável que pode se adequar às necessidades de mudança de um negócio.
                         </p>
                     </aside>
                     <figure className={styles.qrCode}>
