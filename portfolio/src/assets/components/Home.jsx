@@ -46,7 +46,7 @@ const Home = () => {
                         <p className={styles.greeting}>{"Olá Mundo! </>"}</p>
                         <h1><span>Eu sou</span> Lucas Eduardo</h1>
                         <p className={styles.smallDescription}>
-                            Um <span>Desenvolvedor Front-end Jr.</span> interessado em criar aplicações e experiências web interativas.
+                            Um <span>Desenvolvedor Front-end</span> interessado em criar aplicações e experiências web interativas.
                         </p>
                         <section className={styles.socialMedia}>
                             <ul className={styles.socialList}>

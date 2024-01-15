@@ -9,18 +9,83 @@ import { useContext } from 'react';
 
 import qrCode from '../images/qrcode-curriculum.png';
 
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
+
 const Skills = () => {
     const themeContext = useContext(ThemeContext);
+
+    const [titleRef, titleInView] = useInView({ 
+        threshold: 0.1 
+    });
+    const [techIconsRef, techIconsInView] = useInView({      
+        threshold: 0.1 
+    });
+
+    const [skillsInfoRef, skillsInfoInView] = useInView({
+        threshold: 0.1
+    });
+    const [qrCodeRef, qrCodeInView] = useInView({
+        threshold: 0.1
+    });
+
+    const titleVariants = {
+        hidden: { y: -50, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: { duration: 1.5, ease: "easeOut" }
+        }
+    };
+    
+    const techIconsVariants = {
+        hidden: { y: -50, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: { duration: 1.5, ease: "easeOut", staggerChildren: 0.1 }
+        }
+    };
+
+    const skillsInfoVariants = {
+        hidden: { x: -100, opacity: 0 },
+        visible: {
+            x: 0,
+            opacity: 1,
+            transition: { duration: 1.5, ease: "easeOut" }
+        }
+    };
+    
+    const qrCodeVariants = {
+        hidden: { x: 100, opacity: 0 },
+        visible: {
+            x: 0,
+            opacity: 1,
+            transition: { duration: 1.5, ease: "easeOut" }
+        }
+    };
 
     return (    
         <>
             <section className={`${styles.containerSkills} ${themeContext.theme === 'dark' ? styles.darkMode : ''}`}>
 
-                <section className={styles.title}>
-                    <h2>Minhas Skills</h2>
-                </section>
+                <motion.section 
+                    className={styles.title}
+                    ref={titleRef}
+                    initial="hidden"
+                    animate={titleInView ? "visible" : "hidden"}
+                    variants={titleVariants}
+                >      
+                    <h2>MINHAS SKILLS</h2>
+                </motion.section>
 
-                <ul className={styles.techIcons}>
+                <motion.ul               
+                    className={styles.techIcons}
+                    ref={techIconsRef}
+                    initial="hidden"
+                    animate={techIconsInView ? "visible" : "hidden"}
+                    variants={techIconsVariants}
+                >
                     <li className={styles.techItems}>
                         <BiLogoJavascript/>
                     </li>
@@ -45,25 +110,37 @@ const Skills = () => {
                     <li className={styles.techItems}>
                         <TbBrandVscode/>
                     </li>
-                </ul>
+                </motion.ul>
 
-                <section className={styles.infoWrap}>
-                    <aside className={styles.skillsInfo}>
+                <motion.section 
+                    className={styles.infoWrap}
+                    initial="hidden"
+                    animate={skillsInfoInView && qrCodeInView ? "visible" : "hidden"}
+                >
+                    <motion.aside 
+                        className={styles.skillsInfo}
+                        ref={skillsInfoRef}
+                        variants={skillsInfoVariants}
+                    >
                         <h4>O que eu posso fazer</h4>
                         <p>
                             Como desenvolvedor, tenho conhecimento em Javascript, React, HTML e CSS.
                             Minha breve experiência e objetivo com o uso dessa stack é para construção de aplicações responsivas, dinâmicas, escaláveis e de fácil manutenção. Me permitindo criar um código eficiente e sustentável que pode se adequar às necessidades de mudança de um negócio.
                         </p>
-                    </aside>
-                    <figure className={styles.qrCode}>
+                    </motion.aside>
+                    <motion.figure 
+                        className={styles.qrCode}
+                        ref={qrCodeRef}
+                        variants={qrCodeVariants}
+                    >
                         <img src={qrCode} alt="QR Code do meu currículo"/>
                         <aside>
                             <p>Meu</p>
                             <p>Curriculum</p>
                             <p>Vitae</p>
                         </aside>
-                    </figure>
-                </section>
+                    </motion.figure>
+                </motion.section>
 
             </section>
         </>

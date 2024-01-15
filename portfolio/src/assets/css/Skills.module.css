@@ -4,12 +4,12 @@
     flex-direction: column;
     align-items: center;
     color: var(--dark);
-    padding: 3rem 6rem;
+    padding: 6rem;
     gap: 2rem;
 }
 
-.title {
-    font-size: 1.2em;
+.title h2 {
+    font-size: 1.5em;
 }
 
 .techIcons {
