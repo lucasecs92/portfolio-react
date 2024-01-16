@@ -25,6 +25,7 @@
 .navRight {
     display: flex;
     align-items: center;
+    gap: 1.5rem;
 }
 
 .navRight svg {
@@ -46,7 +47,6 @@
 }
 
 .modeIcon {
-    padding-left: 30px;
     padding-top: 8px;
 }
 
@@ -79,12 +79,13 @@
 .menuList li a {
     color: var(--light);
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    cursor: pointer;
 }
-
+/* 
 .menuList li a:hover {
-    text-decoration: underline;
-}
+ 
+} */
 
 .closeIcon {
     position: absolute;

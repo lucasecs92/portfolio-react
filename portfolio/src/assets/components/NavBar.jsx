@@ -5,6 +5,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import ThemeContext from '../../contexts/ThemeContext';
 
 import PropTypes from 'prop-types';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const NavBar = ({ homeRef, skillsRef, projectsRef, contactRef }) => {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 975);
@@ -54,6 +55,27 @@ const NavBar = ({ homeRef, skillsRef, projectsRef, contactRef }) => {
         }, 0);
     };
 
+    const menuVariants = {
+        hidden: {
+            x: '-100%', // Começa fora da tela
+            opacity: 0,
+            transition: {
+                type: 'spring',
+                stiffness: 120,
+                damping: 20
+            }
+        },
+        visible: {
+            x: '0', // Termina na posição original
+            opacity: 1,
+            transition: {
+                type: 'spring',
+                stiffness: 120,
+                damping: 20
+            }
+        }
+    };
+
     return (
         <>
             <section className={`${styles.containerNavBar} ${isDarkMode ? styles.darkMode : ''}`}>
@@ -90,27 +112,35 @@ const NavBar = ({ homeRef, skillsRef, projectsRef, contactRef }) => {
                 </nav>
             </section>
 
-            {showMenu && (
-                <div className={styles.menuOverlay}>
-                    <span className={styles.closeIcon} onClick={handleClick}>
-                        <FaTimes />
-                    </span>
-                    <ul className={styles.menuList}>
-                        <li>
-                            <a onClick={() => scrollToRef(homeRef)}>Home</a>
-                        </li>
-                        <li>
-                            <a onClick={() => scrollToRef(skillsRef)}>Skills</a>
-                        </li>
-                        <li>
-                            <a onClick={() => scrollToRef(projectsRef)}>Projetos</a>
-                        </li>
-                        <li>
-                            <a onClick={() => scrollToRef(contactRef)}>Contato</a>
-                        </li>
-                    </ul>
-                </div>
-            )}
+            <AnimatePresence>
+                {showMenu && (
+                    <motion.div
+                        className={styles.menuOverlay}
+                        initial="hidden"
+                        animate={showMenu ? "visible" : "hidden"}
+                        exit="hidden"
+                        variants={menuVariants}
+                    >
+                        <span className={styles.closeIcon} onClick={handleClick}>
+                            <FaTimes />
+                        </span>
+                        <ul className={styles.menuList}>
+                            <li>
+                                <a onClick={() => scrollToRef(homeRef)}>Home</a>
+                            </li>
+                            <li>
+                                <a onClick={() => scrollToRef(skillsRef)}>Skills</a>
+                            </li>
+                            <li>
+                                <a onClick={() => scrollToRef(projectsRef)}>Projetos</a>
+                            </li>
+                            <li>
+                                <a onClick={() => scrollToRef(contactRef)}>Contato</a>
+                            </li>
+                        </ul>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </>
     )
 }

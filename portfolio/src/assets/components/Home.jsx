@@ -7,6 +7,7 @@ import ThemeContext from '../../contexts/ThemeContext';
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { FaCode } from 'react-icons/fa';
 
 const Home = () => {
     const themeContext = useContext(ThemeContext);
@@ -43,7 +44,8 @@ const Home = () => {
             <section className={`${styles.containerHome} ${themeContext.theme === 'dark' ? styles.darkMode : ''}`}>
                 <section className={styles.description}>
                     <motion.article ref={ref} animate={inView ? variants.show : variants.hidden} variants={variants} className={styles.descriptionText}>
-                        <p className={styles.greeting}>{"Olá Mundo! </>"}</p>
+                        <p className={styles.greeting}>{"Olá Mundo!"}<FaCode /></p>
+                        
                         <h1><span>Eu sou</span> Lucas Eduardo</h1>
                         <p className={styles.smallDescription}>
                             Um <span>Desenvolvedor Front-end</span> interessado em criar aplicações e experiências web interativas.

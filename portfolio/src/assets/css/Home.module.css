@@ -39,6 +39,14 @@
     line-height: 1.5;
     font-weight: bolder;
     color: var(--darkMode);
+
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.greeting svg {
+    font-size: 1.3rem;
 }
 
 .descriptionText h1 {
