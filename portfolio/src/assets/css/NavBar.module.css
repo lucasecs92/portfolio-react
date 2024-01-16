@@ -1,8 +1,8 @@
 .containerNavBar {
     background-color: var(--light);
     position: fixed;
+    z-index: 1000;
     width: 100%;
-    /* font-family: 'DM Sans', sans-serif; */
 }
 
 .navBarMain {

@@ -8,7 +8,7 @@ import projeto3 from '../images/todolist.png';
 
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 
 import { FiGithub } from "react-icons/fi";
 
@@ -26,6 +26,12 @@ const Projects = () => {
 
     const [headerRef, headerInView] = useInView();
     const [projectsRef, projectsInView] = useInView();
+
+    const [isFirstDescriptionExpanded, setIsFirstDescriptionExpanded] = useState(false);
+
+    const toggleFirstDescription = () => {
+        setIsFirstDescriptionExpanded(!isFirstDescriptionExpanded);
+    };
 
     const variants = {
         hidden: { opacity: 0, x: -100 }, 
@@ -91,7 +97,11 @@ const Projects = () => {
 
                     <section className={styles.projects}>
                             <section className={styles.projectsWrap}>
-                                <motion.aside ref={ref1} animate={inView1 ? variants.show : variants.hidden} variants={variants} className={styles.project1}
+                                <motion.aside 
+                                    ref={ref1} 
+                                    animate={inView1 ? variants.show : variants.hidden} 
+                                    variants={variants} 
+                                    className={styles.project1}
                                 >
                                     <h4 className={styles.projectName}>Book Store</h4>
                                     <ul className={styles.projectStack}>
@@ -99,9 +109,12 @@ const Projects = () => {
                                         <li>JavaScript</li>
                                         <li>CSS</li>
                                     </ul>
-                                    <p className={styles.projectDescription}>
+                                    <p className={`${styles.projectDescription} ${isFirstDescriptionExpanded ? styles.expanded : ''}`}>
                                         A Book Store é uma aplicação web interativa, projetada para simular uma experiência de compra de livros online. A interface é composta por uma barra de navegação intuitiva com busca, acesso fácil ao carrinho de compras e opções de login. A página inicial apresenta alguns destaques, seções para lançamentos e best sellers, ambas com funcionalidade de adicionar livros ao carrinho, além de um convite para inscrição na Newsletter e um link para baixar o aplicativo da loja. O design é focado na usabilidade e na estética agradável, criando um ambiente convidativo para os usuários explorarem e comprarem livros. Este projeto demonstra habilidades em gerenciamento de estado e componentização no React, além de oferecer uma visão prática do desenvolvimento de e-commerce.
                                     </p>
+                                    <a className={styles.viewMoreBtn} onClick={toggleFirstDescription}>
+                                        {isFirstDescriptionExpanded ? 'Ver menos' : 'Ver mais...'}
+                                    </a>
                                     <div className={styles.projectLinksWrap}>
                                         <a className={styles.projectBtn} href="https://book-store-rho-ten.vercel.app/" target='_blank' rel='noopener noreferrer'>
                                             Visualizar Website

@@ -77,6 +77,27 @@
     line-height: 1.5;
 }
 
+.project1
+.projectDescription {
+    line-height: 1.5;
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Número de linhas a serem mostradas quando recolhido */
+    -webkit-box-orient: vertical;
+}
+
+.project1 .projectDescription.expanded {
+    -webkit-line-clamp: unset; /* Mostra todo o texto quando expandido */
+}
+
+.viewMoreBtn {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9rem;
+}
+
 .projectLinksWrap {
     display: flex;
     align-items: center;
