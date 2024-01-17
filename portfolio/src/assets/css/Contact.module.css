@@ -1,6 +1,11 @@
 .containerContact {
+    height: 100vh;
     padding: 4rem;
     color: var(--dark);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contactWrap {
@@ -98,6 +103,10 @@
 }
 
 @media (max-width: 820px) {
+
+    .containerContact {
+        height: auto;
+    }
 
     .inputs {
         width: 70vw;

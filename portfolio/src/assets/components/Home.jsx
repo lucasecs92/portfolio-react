@@ -48,7 +48,7 @@ const Home = () => {
                         
                         <h1><span>Eu sou</span> Lucas Eduardo</h1>
                         <p className={styles.smallDescription}>
-                            Um <span>Desenvolvedor Front-end</span> interessado em criar aplicações e experiências web interativas.
+                            Um <span>Desenvolvedor Front-end</span> interessado em criar aplicações e experiências web interativas e apaixonado por transformar ideias em realidade. Busco constantemente novas maneiras de inovar e expandir minhas habilidades e conhecimento.           
                         </p>
                         <section className={styles.socialMedia}>
                             <ul className={styles.socialList}>
