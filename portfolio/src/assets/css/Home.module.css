@@ -35,7 +35,7 @@
 
 .greeting {
     letter-spacing: 1.5px;
-    font-size: 1em;
+    font-size: 1.1rem;
     line-height: 1.5;
     font-weight: bolder;
     color: var(--darkMode);
@@ -150,16 +150,20 @@
         padding: 4rem;
     }
 
+    .descriptionText h1 {
+        font-size: 2.2rem;
+    }
+
     .mainPhoto {
         display: none;
     }
 }
 
-@media (max-width: 935px) {
+/* @media (max-width: 935px) {
     .descriptionText h1 {
         font-size: 3.1rem;
     }
-}
+} */
 
 @media (max-width: 718px) {
 
@@ -174,8 +178,24 @@
         padding: 0%;
     }
 
+    .greeting {
+        padding-bottom: 1rem;
+    }
+
     .greeting, .descriptionText h3, .descriptionText h1 {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .descriptionText h1 {
+        display: flex;
         text-align: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .descriptionText h1 span {
+        font-size: 1.5rem;
     }
 
     .smallDescription {
@@ -197,7 +217,8 @@
 
 @media (max-width: 500px) {
 
-    .descriptionText h1 span {
-        font-size: 1.8rem;
+    .containerHome {
+        padding: 5rem 0;
     }
-}
+
+ }

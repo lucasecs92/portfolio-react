@@ -78,6 +78,8 @@
 }
 
 .project1
+.projectDescription,
+.project3
 .projectDescription {
     line-height: 1.5;
 
@@ -86,8 +88,8 @@
     -webkit-line-clamp: 3; /* Número de linhas a serem mostradas quando recolhido */
     -webkit-box-orient: vertical;
 }
-
-.project1 .projectDescription.expanded {
+.project1 .projectDescription.expanded,
+.project3 .projectDescription.expanded {
     -webkit-line-clamp: unset; /* Mostra todo o texto quando expandido */
 }
 
@@ -96,6 +98,7 @@
     display: flex;
     justify-content: flex-end;
     font-size: 0.9rem;
+    padding-right: 2rem;
 }
 
 .projectLinksWrap {
@@ -260,5 +263,23 @@
     
     .containerProjects {
         padding: 3rem;
+    }
+
+    .projectHeader h2 {
+        font-size: 1.9rem;
+        padding: 1.5rem 0;
+    }
+
+    .projects {
+        padding: 0;
+    }
+
+    .projectsWrap {
+        padding: 3rem 0;
+    }
+
+    .viewMoreBtn {
+        justify-content: center;
+        padding-right: 0;
     }
 }

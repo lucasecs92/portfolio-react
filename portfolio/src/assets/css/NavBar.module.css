@@ -65,6 +65,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 2000;
 }
 
 .menuList {
@@ -130,5 +131,11 @@
     .navBarMain {
         padding: 1rem 4rem;
     }
+}
 
+@media (max-width: 500px) {
+
+    .navBarMain {
+        padding: 1rem 2rem;
+    }
 }

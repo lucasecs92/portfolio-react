@@ -28,9 +28,14 @@ const Projects = () => {
     const [projectsRef, projectsInView] = useInView();
 
     const [isFirstDescriptionExpanded, setIsFirstDescriptionExpanded] = useState(false);
+    const [isThirdDescriptionExpanded, setIsThirdDescriptionExpanded] = useState(false);
 
     const toggleFirstDescription = () => {
         setIsFirstDescriptionExpanded(!isFirstDescriptionExpanded);
+    };
+
+    const toggleThirdDescription = () => {
+        setIsThirdDescriptionExpanded(!isThirdDescriptionExpanded);
     };
 
     const variants = {
@@ -113,8 +118,9 @@ const Projects = () => {
                                         A Book Store é uma aplicação web interativa, projetada para simular uma experiência de compra de livros online. A interface é composta por uma barra de navegação intuitiva com busca, acesso fácil ao carrinho de compras e opções de login. A página inicial apresenta alguns destaques, seções para lançamentos e best sellers, ambas com funcionalidade de adicionar livros ao carrinho, além de um convite para inscrição na Newsletter e um link para baixar o aplicativo da loja. O design é focado na usabilidade e na estética agradável, criando um ambiente convidativo para os usuários explorarem e comprarem livros. Este projeto demonstra habilidades em gerenciamento de estado e componentização no React, além de oferecer uma visão prática do desenvolvimento de e-commerce.
                                     </p>
                                     <a className={styles.viewMoreBtn} onClick={toggleFirstDescription}>
-                                        {isFirstDescriptionExpanded ? 'Ver menos' : 'Ver mais...'}
+                                        {isFirstDescriptionExpanded ? 'Ver menos' : 'Ler mais'}
                                     </a>
+
                                     <div className={styles.projectLinksWrap}>
                                         <a className={styles.projectBtn} href="https://book-store-rho-ten.vercel.app/" target='_blank' rel='noopener noreferrer'>
                                             Visualizar Website
@@ -160,9 +166,13 @@ const Projects = () => {
                                         <li>React</li>
                                         <li>CSS</li>
                                     </ul>
-                                    <p className={styles.projectDescription}>
+                                    <p className={`${styles.projectDescription} ${isThirdDescriptionExpanded ? styles.expanded : ''}`}>
                                         O To Do List é uma aplicação web que oferece uma maneira simples e eficaz de gerenciar tarefas diárias. Com uma interface limpa e funcionalidades intuitivas, os usuários podem adicionar, editar, remover e marcar tarefas como concluídas com facilidade, assim sendo classificado como CRUD. O projeto demonstra o uso de estados e efeitos em React, além de práticas de desenvolvimento como a componentização e a gestão de estados locais e globais. O To Do List é uma ferramenta versátil que ajuda os usuários a manterem-se organizados e produtivos.
                                     </p>
+                                    <a className={styles.viewMoreBtn} onClick={toggleThirdDescription}>
+                                        {isThirdDescriptionExpanded ? 'Ver menos' : 'Ler mais'}
+                                    </a>
+
                                     <div className={styles.projectLinksWrap}>
                                         <a className={styles.projectBtn} href="https://todolist-bay-five.vercel.app/" target='_blank' rel='noopener noreferrer'>
                                             Visualizar Website
