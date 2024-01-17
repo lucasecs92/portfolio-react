@@ -8,6 +8,7 @@ import ThemeContext from '../../contexts/ThemeContext';
 import { useContext } from 'react';
 
 import qrCode from '../images/qrcode-curriculum.png';
+import qrCodeDark from '../images/qrcode-darkmode.png';
 
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
@@ -132,7 +133,7 @@ const Skills = () => {
                         ref={qrCodeRef}
                         variants={qrCodeVariants}
                     >
-                        <img src={qrCode} alt="QR Code do meu currículo"/>
+                        <img src={themeContext.theme === 'dark' ? qrCodeDark : qrCode} alt="QR Code do meu currículo"/>
                         <aside>
                             <p>Meu</p>
                             <p>Curriculum</p>

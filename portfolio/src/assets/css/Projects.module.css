@@ -216,7 +216,8 @@
     .projectsWrap, .projectsWrapReverse{
         flex-direction: column;
         gap: 1rem;
-        padding: 4rem 0;
+        padding: 5rem 0;
+        border-bottom: 1px solid var(--darkMode);
     }
 
     .projectStack, .projectStackReverse {
@@ -257,6 +258,10 @@
         width: 100%;
     }
 
+    .darkMode .projectsWrap, .darkMode .projectsWrapReverse{
+        border-color: var(--lightMode);
+    }
+
 }
 
 @media (max-width: 500px) {
@@ -272,10 +277,6 @@
 
     .projects {
         padding: 0;
-    }
-
-    .projectsWrap {
-        padding: 3rem 0;
     }
 
     .viewMoreBtn {
