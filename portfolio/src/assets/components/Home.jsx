@@ -3,18 +3,22 @@ import styles from '../css/Home.module.css';
 
 import { BiLogoLinkedin } from "react-icons/bi";
 import { FiGithub } from "react-icons/fi";
+import { FaCode } from 'react-icons/fa';
+
 import ThemeContext from '../../contexts/ThemeContext'; 
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaCode } from 'react-icons/fa';
 
 const Home = () => {
+    // Acesse o contexto do tema
     const themeContext = useContext(ThemeContext);
     
+    // Configure os observadores de interseção para animações
     const [ref, inView] = useInView();
     const [refImg, inViewImg] = useInView();
 
+    // Defina as variantes de animação para o texto e a imagem
     const variants = {
         hidden: { opacity: 0, x: -100 },
         show: {

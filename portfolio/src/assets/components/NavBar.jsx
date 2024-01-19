@@ -8,16 +8,22 @@ import PropTypes from 'prop-types';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const NavBar = ({ homeRef, skillsRef, projectsRef, contactRef }) => {
+    // Estado para controle de visualização mobile
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 975);
+    // Estado para controle do menu em dispositivos móveis
     const [showMenu, setShowMenu] = useState(false);
+    // Acessando o contexto de tema
     const themeContext = useContext(ThemeContext);
+    // Estado para controle do modo escuro
     const [isDarkMode, setIsDarkMode] = useState(themeContext.theme === 'dark');
 
+      // Função para alternar entre o modo claro e escuro
     const toggleDarkMode = () => {
         setIsDarkMode(!isDarkMode);
         themeContext.setTheme(!isDarkMode ? 'dark' : 'light');
     };
 
+    // Hook useEffect para lidar com eventos de redimensionamento e teclado
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 975);
@@ -31,16 +37,19 @@ const NavBar = ({ homeRef, skillsRef, projectsRef, contactRef }) => {
         };
         window.addEventListener('keydown', handleKeyDown);
 
+        // Limpeza dos listeners ao desmontar o componente
         return () => {
             window.removeEventListener("resize", handleResize);
             window.removeEventListener('keydown', handleKeyDown);
         };
     }, []);
 
+    // Função para controlar a visibilidade do menu
     const handleClick = () => {
         setShowMenu(!showMenu);
     }
 
+    // Função para rolar a página até a referência do elemento passado
     const scrollToRef = (ref) => {
         // Fecha o menu móvel se estiver aberto
         if (showMenu) {
@@ -55,10 +64,10 @@ const NavBar = ({ homeRef, skillsRef, projectsRef, contactRef }) => {
         }, 0);
     };
 
+    // Variantes de animação para o menu móvel
     const menuVariants = {
         hidden: {
-            x: '-100%', // Começa fora da tela
-            opacity: 0,
+            x: '-100%', // Posição inicial fora da tela
             transition: {
                 type: 'spring',
                 stiffness: 120,
@@ -66,7 +75,7 @@ const NavBar = ({ homeRef, skillsRef, projectsRef, contactRef }) => {
             }
         },
         visible: {
-            x: '0', // Termina na posição original
+            x: '0', // Posição final na tela
             opacity: 1,
             transition: {
                 type: 'spring',
@@ -145,6 +154,7 @@ const NavBar = ({ homeRef, skillsRef, projectsRef, contactRef }) => {
     )
 }
 
+// Definindo os tipos das propriedades para validação
 NavBar.propTypes = {
     homeRef: PropTypes.oneOfType([
       PropTypes.func, 

@@ -125,7 +125,7 @@ const Projects = () => {
                                         <a className={styles.projectBtn} href="https://book-store-rho-ten.vercel.app/" target='_blank' rel='noopener noreferrer'>
                                             Visualizar Website
                                         </a>
-                                        <a href="https://github.com/lucasecs92/book-store-react/tree/main/book-store" target="_blank" rel="noopener noreferrer" className={styles.githubIcon}><FiGithub/></a>
+                                        <a href="https://github.com/lucasecs92/book-store-react/blob/main/book-store/src/App.jsx" target="_blank" rel="noopener noreferrer" className={styles.githubIcon}><FiGithub/></a>
                                     </div>
                                 </motion.aside>
                                 <motion.figure ref={refImg1} animate={inViewImg1 ? "show" : "hidden"} variants={imgVariants} className={styles.projectImg}
@@ -146,7 +146,7 @@ const Projects = () => {
                                         O Weather App é uma aplicação interativa que permite aos usuários pesquisar e visualizar dados meteorológicos rápidos, confiáveis e em tempo real. Utilizando um design responsivo e uma interface de usuário (UI) intuitiva, o aplicativo oferece uma experiência de usuário (UX) agradável e eficiente.
                                     </p>
                                     <div className={styles.projectLinksWrapReverse}>
-                                        <a href="https://github.com/lucasecs92/weather-react/tree/main/weather" target="_blank" rel="noopener noreferrer" className={styles.githubIcon}><FiGithub/></a>
+                                        <a href="https://github.com/lucasecs92/weather-react/blob/main/weather/src/App.jsx" target="_blank" rel="noopener noreferrer" className={styles.githubIcon}><FiGithub/></a>
                                         <a className={styles.projectBtnReverse} href="https://weather-navy-xi.vercel.app/" target='_blank' rel='noopener noreferrer'>
                                             Visualizar Website
                                         </a>
@@ -177,7 +177,7 @@ const Projects = () => {
                                         <a className={styles.projectBtn} href="https://todolist-bay-five.vercel.app/" target='_blank' rel='noopener noreferrer'>
                                             Visualizar Website
                                         </a>
-                                        <a href="https://github.com/lucasecs92/to-do-list/tree/main/todolist" target="_blank" rel="noopener noreferrer" className={styles.githubIcon}><FiGithub/></a>
+                                        <a href="https://github.com/lucasecs92/to-do-list/blob/main/todolist/src/App.tsx" target="_blank" rel="noopener noreferrer" className={styles.githubIcon}><FiGithub/></a>
                                     </div>
                                 </motion.aside>
                                 <motion.figure ref={refImg3} animate={inViewImg3 ? "show" : "hidden"} variants={imgVariants} className={styles.projectImg}>

@@ -1,21 +1,28 @@
 import styles from '../css/Skills.module.css';
 
+// Ícones
 import { FaCss3Alt, FaGitAlt, FaHtml5, FaLinux, FaReact } from "react-icons/fa";
 import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
 import { TbBrandVscode } from "react-icons/tb";
 
+// Importação do contexto de tema
 import ThemeContext from '../../contexts/ThemeContext';
 import { useContext } from 'react';
 
+// Imagens
 import qrCode from '../images/qrcode-curriculum.png';
 import qrCodeDark from '../images/qrcode-darkmode.png';
 
+// Importação do hook useInView para detectar quando um elemento está visível na tela
 import { useInView } from 'react-intersection-observer';
+// Importação da biblioteca framer-motion para adicionar animações ao componente
 import { motion } from 'framer-motion';
 
 const Skills = () => {
+    // Uso do contexto de tema
     const themeContext = useContext(ThemeContext);
 
+    // Definição dos refs e variáveis de estado para controlar a visibilidade dos elementos
     const [titleRef, titleInView] = useInView({ 
         threshold: 0.1 
     });
@@ -30,6 +37,7 @@ const Skills = () => {
         threshold: 0.1
     });
 
+    // Definição das variantes para as animações
     const titleVariants = {
         hidden: { y: -50, opacity: 0 },
         visible: {

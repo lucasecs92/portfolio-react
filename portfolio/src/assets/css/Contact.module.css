@@ -33,7 +33,6 @@
 
 .inputs {
     background-color: transparent;
-
     width: 600px;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -41,19 +40,20 @@
     padding: 15px 10px;
     border-color: var(--darkMode);
     border-style: solid;
-
     font-size: 0.9rem;
+    color: var(--dark);
 }
 
 .contactForm textarea {
     background-color: transparent;
-
     resize: none; /*desabilita o redimensionamento padrão do textarea*/
     height: 15vh;
     width: 600px;
     border-radius: 5px;
     border: 2px solid var(--darkMode);
     padding: 10px;
+    font-size: 0.9rem;
+    color: var(--dark);
 }
 
 .submit {
@@ -85,10 +85,12 @@
 
 .darkMode .inputs {
     border-color: var(--lightMode);
+    color: var(--light);
 }
 
 .darkMode .contactForm textarea {
     border-color: var(--lightMode);
+    color: var(--light);
 }
 
 .darkMode .submit {
