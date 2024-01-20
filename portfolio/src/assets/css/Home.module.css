@@ -27,7 +27,7 @@
     border-radius: 63% 37% 60% 40% / 38% 46% 54% 62%;
     object-fit: cover;
     z-index: -1;
-    box-shadow: 4px 0 10px 0 #777, 8px 0 10px 0 #aaa, 12px 0 10px 0 #eee;
+    box-shadow: 4px 0 10px 0 var(--darkMode), 8px 0 10px 0 var(--lightMode), 12px 0 10px 0 var(--light);
 }
 
 .descriptionText {
@@ -136,6 +136,10 @@
 .darkMode .socialList li a:hover {
     background-color: var(--lightMode);
     color: var(--darkMode);
+}
+
+.darkMode .mainPhoto img {
+    box-shadow: none;
 }
 
 @media (max-width: 1215px) {
