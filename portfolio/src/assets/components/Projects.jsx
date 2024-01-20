@@ -13,9 +13,10 @@ import { useContext, useState } from 'react';
 import { FiGithub } from "react-icons/fi";
 
 const Projects = () => {
-
+    // Acessando o contexto de tema para aplicar estilos condicionais.
     const themeContext = useContext(ThemeContext);
 
+    // Hooks para verificar se um elemento está visível na viewport.
     const [ref1, inView1] = useInView();
     const [ref2, inView2] = useInView();
     const [ref3, inView3] = useInView();
@@ -27,17 +28,19 @@ const Projects = () => {
     const [headerRef, headerInView] = useInView();
     const [projectsRef, projectsInView] = useInView();
 
+    // Estados para controlar a expansão das descrições dos projetos.
     const [isFirstDescriptionExpanded, setIsFirstDescriptionExpanded] = useState(false);
     const [isThirdDescriptionExpanded, setIsThirdDescriptionExpanded] = useState(false);
 
+    // Funções para alternar a expansão das descrições dos projetos.
     const toggleFirstDescription = () => {
         setIsFirstDescriptionExpanded(!isFirstDescriptionExpanded);
     };
-
     const toggleThirdDescription = () => {
         setIsThirdDescriptionExpanded(!isThirdDescriptionExpanded);
     };
 
+    // Variantes de animação para os elementos do componente.
     const variants = {
         hidden: { opacity: 0, x: -100 }, 
         show: {

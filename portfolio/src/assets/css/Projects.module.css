@@ -226,12 +226,12 @@
 
     .projectLinksWrap {
         justify-content: center;
-        flex-direction: column;
+        /* flex-direction: column; */
     }
 
     .projectLinksWrapReverse {
         justify-content: center;
-        flex-direction: column-reverse;
+        flex-direction: row-reverse;
     }
 
     .project1, .project2, .project3 {
