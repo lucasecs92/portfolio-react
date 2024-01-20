@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     color: var(--dark);
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .title h2 {
@@ -32,7 +32,7 @@
 .infoWrap {
     display: flex;
     gap: 9rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 .skillsInfo {
