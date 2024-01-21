@@ -125,7 +125,7 @@ const Projects = () => {
                                     </a>
 
                                     <div className={styles.projectLinksWrap}>
-                                        <a className={styles.projectBtn} href="https://book-store-rho-ten.vercel.app/" target='_blank' rel='noopener noreferrer'>
+                                        <a className={styles.projectBtn} href="https://bookstore-l.vercel.app/" target='_blank' rel='noopener noreferrer'>
                                             Visualizar Website
                                         </a>
                                         <a href="https://github.com/lucasecs92/book-store-react/blob/main/book-store/src/App.jsx" target="_blank" rel="noopener noreferrer" className={styles.githubIcon}><FiGithub/></a>
