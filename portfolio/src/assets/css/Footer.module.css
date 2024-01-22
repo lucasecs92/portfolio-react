@@ -17,6 +17,12 @@
     color: var(--dark);
 }
 
+
+.socialItem svg:hover {
+    transform: scale(1.4); /* Aumenta o tamanho em 40% */
+    transition: transform 0.3s ease;
+}
+
 /* DARK MODE */
 .darkMode {
     background-color: var(--dark);

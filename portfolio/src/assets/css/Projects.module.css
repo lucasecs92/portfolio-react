@@ -101,6 +101,11 @@
     padding-right: 2rem;
 }
 
+.viewMoreBtn:hover {
+    opacity: 0.7; /* Torna o ícone 30% mais transparente */
+    transition: opacity 0.3s ease;
+}
+
 .projectLinksWrap {
     display: flex;
     align-items: center;
@@ -135,7 +140,13 @@
     color: var(--darkMode);
 }
 
-.project2 {
+.githubIcon:hover {
+    transform: scale(1.2); /* Aumenta o tamanho em 20% */
+    transition: transform 0.3s ease;
+}
+
+.project2, 
+.project4 {
     text-align: end;
     width: 100%;
     display: flex;
@@ -143,7 +154,8 @@
     gap: 1rem;
 }
 
-.project2 .projectDescription {
+.project2 .projectDescription, 
+.project4 .projectDescription {
     text-align: justify;
 }
 
@@ -234,7 +246,7 @@
         flex-direction: row-reverse;
     }
 
-    .project1, .project2, .project3 {
+    .project1, .project2, .project3, .project4 {
         width: auto;
         padding-bottom: 0;
         text-align: center;

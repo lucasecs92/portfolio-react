@@ -5,6 +5,7 @@ import ThemeContext from '../../contexts/ThemeContext';
 import projeto1 from '../images/bookstore.png';
 import projeto2 from '../images/weather.png';
 import projeto3 from '../images/todolist.png';
+import projeto4 from '../images/jogo-numero-secreto.png';
 
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
@@ -20,10 +21,13 @@ const Projects = () => {
     const [ref1, inView1] = useInView();
     const [ref2, inView2] = useInView();
     const [ref3, inView3] = useInView();
+    const [ref4, inView4] = useInView();
+
 
     const [refImg1, inViewImg1] = useInView();
     const [refImg2, inViewImg2] = useInView();
     const [refImg3, inViewImg3] = useInView();
+    const [refImg4, inViewImg4] = useInView();
 
     const [headerRef, headerInView] = useInView();
     const [projectsRef, projectsInView] = useInView();
@@ -187,6 +191,30 @@ const Projects = () => {
                                     <img src={projeto3} alt="imagem de capa do projeto" />
                                 </motion.figure>
                             </section> 
+
+                            <section className={styles.projectsWrapReverse}>
+                                <motion.aside ref={ref4} animate={inView4 ? imgVariants.show : imgVariants.hidden} variants={imgVariants} className={styles.project4}>
+                                    <h4 className={styles.projectName}>Jogo Número Secreto</h4>
+                                    <ul className={styles.projectStackReverse}>
+                                        <li>JavaScript</li>
+                                        <li>CSS</li>
+                                        <li>API</li>
+                                    </ul>
+                                    <p className={styles.projectDescription}>
+                                        Um jogo interativo de adivinhação que desafia os jogadores a descobrir um número secreto usando apenas suas vozes. Este jogo combina a adivinhação com a tecnologia moderna de reconhecimento de voz, proporcionando uma experiência única. Utilizando a API Web Speech para reconhecimento de voz, o jogo oferece uma maneira inovadora e acessível de jogar, permitindo que os jogadores interajam diretamente com o jogo falando seus palpites.
+                                    </p>
+                                    <div className={styles.projectLinksWrapReverse}>
+                                        <a href="https://github.com/lucasecs92/jogo-numero-secreto/blob/main/index.html" target="_blank" rel="noopener noreferrer" className={styles.githubIcon}><FiGithub/></a>
+                                        <a className={styles.projectBtnReverse} href="https://jogo-numero-secreto-l.vercel.app/" target='_blank' rel='noopener noreferrer'>
+                                            Visualizar Website
+                                        </a>
+                                    </div>
+                                </motion.aside>
+
+                                <motion.figure ref={refImg4} animate={inViewImg4 ? "show" : "hidden"} variants={variants} className={styles.projectImgReverse}>
+                                    <img src={projeto4} alt="imagem de capa do projeto" />
+                                </motion.figure>
+                            </section>
                     </section>
             </motion.section>
         </>

@@ -50,6 +50,12 @@
     padding-top: 8px;
 }
 
+.navRightUl li:hover,
+.modeIcon:hover {
+    transform: scale(1.2); /* Aumenta o tamanho em 20% */
+    transition: transform 0.3s ease;
+}
+
 .burgerIcon svg, .modeIcon svg {
     cursor: pointer;
     color: var(--dark);
@@ -75,6 +81,11 @@
 
 .menuList li {
     margin: 1rem 0;
+}
+
+.menuList li:hover {
+    transform: scale(1.2); /* Aumenta o tamanho em 20% */
+    transition: transform 0.3s ease;
 }
 
 .menuList li a {
