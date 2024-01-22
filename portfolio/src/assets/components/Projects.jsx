@@ -150,7 +150,7 @@ const Projects = () => {
                                     </p>
                                     <div className={styles.projectLinksWrapReverse}>
                                         <a href="https://github.com/lucasecs92/weather-react/blob/main/weather/src/App.jsx" target="_blank" rel="noopener noreferrer" className={styles.githubIcon}><FiGithub/></a>
-                                        <a className={styles.projectBtnReverse} href="https://weather-navy-xi.vercel.app/" target='_blank' rel='noopener noreferrer'>
+                                        <a className={styles.projectBtnReverse} href="https://weather-l.vercel.app/" target='_blank' rel='noopener noreferrer'>
                                             Visualizar Website
                                         </a>
                                     </div>
@@ -177,7 +177,7 @@ const Projects = () => {
                                     </a>
 
                                     <div className={styles.projectLinksWrap}>
-                                        <a className={styles.projectBtn} href="https://todolist-bay-five.vercel.app/" target='_blank' rel='noopener noreferrer'>
+                                        <a className={styles.projectBtn} href="https://todolist-l.vercel.app/" target='_blank' rel='noopener noreferrer'>
                                             Visualizar Website
                                         </a>
                                         <a href="https://github.com/lucasecs92/to-do-list/blob/main/todolist/src/App.tsx" target="_blank" rel="noopener noreferrer" className={styles.githubIcon}><FiGithub/></a>
