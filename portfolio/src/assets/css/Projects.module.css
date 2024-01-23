@@ -80,17 +80,23 @@
 .project1
 .projectDescription,
 .project3
-.projectDescription {
+.projectDescription, 
+.project4 .projectDescription {
     line-height: 1.5;
 
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* Número de linhas a serem mostradas quando recolhido */
+    -webkit-line-clamp: 4; /* Número de linhas a serem mostradas quando recolhido */
     -webkit-box-orient: vertical;
 }
 .project1 .projectDescription.expanded,
-.project3 .projectDescription.expanded {
+.project3 .projectDescription.expanded, 
+.project4 .projectDescription.expanded {
     -webkit-line-clamp: unset; /* Mostra todo o texto quando expandido */
+}
+
+.project4 .viewMoreBtn {
+    justify-content: flex-start;
 }
 
 .viewMoreBtn {

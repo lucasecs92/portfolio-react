@@ -35,6 +35,7 @@ const Projects = () => {
     // Estados para controlar a expansão das descrições dos projetos.
     const [isFirstDescriptionExpanded, setIsFirstDescriptionExpanded] = useState(false);
     const [isThirdDescriptionExpanded, setIsThirdDescriptionExpanded] = useState(false);
+    const [isFourthDescriptionExpanded, setIsFourthDescriptionExpanded] = useState(false); 
 
     // Funções para alternar a expansão das descrições dos projetos.
     const toggleFirstDescription = () => {
@@ -42,6 +43,9 @@ const Projects = () => {
     };
     const toggleThirdDescription = () => {
         setIsThirdDescriptionExpanded(!isThirdDescriptionExpanded);
+    };
+    const toggleFourthDescription = () => { 
+        setIsFourthDescriptionExpanded(!isFourthDescriptionExpanded);
     };
 
     // Variantes de animação para os elementos do componente.
@@ -200,9 +204,11 @@ const Projects = () => {
                                         <li>CSS</li>
                                         <li>API</li>
                                     </ul>
-                                    <p className={styles.projectDescription}>
+                                    <p className={`${styles.projectDescription} ${isFourthDescriptionExpanded ? styles.expanded : ''}`}> 
                                         Um jogo interativo de adivinhação que desafia os jogadores a descobrir um número secreto usando apenas suas vozes. Este jogo combina a adivinhação com a tecnologia moderna de reconhecimento de voz, proporcionando uma experiência única. Utilizando a API Web Speech para reconhecimento de voz, o jogo oferece uma maneira inovadora e acessível de jogar, permitindo que os jogadores interajam diretamente com o jogo falando seus palpites.
                                     </p>
+                                    <a className={styles.viewMoreBtn} onClick={toggleFourthDescription}>                            {isFourthDescriptionExpanded ? 'Ver menos' : 'Ler mais'}
+                                    </a>
                                     <div className={styles.projectLinksWrapReverse}>
                                         <a href="https://github.com/lucasecs92/jogo-numero-secreto/blob/main/index.html" target="_blank" rel="noopener noreferrer" className={styles.githubIcon}><FiGithub/></a>
                                         <a className={styles.projectBtnReverse} href="https://jogo-numero-secreto-l.vercel.app/" target='_blank' rel='noopener noreferrer'>
