@@ -123,6 +123,7 @@ const Projects = () => {
                                     <ul className={styles.projectStack}>
                                         <li>React</li>
                                         <li>JavaScript</li>
+                                        <li>HTML</li>
                                         <li>CSS</li>
                                     </ul>
                                     <p className={`${styles.projectDescription} ${isFirstDescriptionExpanded ? styles.expanded : ''}`}>
@@ -149,12 +150,13 @@ const Projects = () => {
                                 <motion.aside ref={ref2} animate={inView2 ? imgVariants.show : imgVariants.hidden} variants={imgVariants} className={styles.project2}>
                                     <h4 className={styles.projectName}>Weather</h4>
                                     <ul className={styles.projectStackReverse}>
-                                        <li>JavaScript</li>
-                                        <li>React</li>
+                                        <li>React JS</li>
+                                        <li>HTML</li>
                                         <li>CSS</li>
+                                        <li>API</li>
                                     </ul>
                                     <p className={styles.projectDescription}>
-                                        O Weather App é uma aplicação interativa que permite aos usuários pesquisar e visualizar dados meteorológicos rápidos, confiáveis e em tempo real. Utilizando um design responsivo e uma interface de usuário (UI) intuitiva, o aplicativo oferece uma experiência de usuário (UX) agradável e eficiente.
+                                        O Weather App é uma aplicação interativa que permite aos usuários pesquisar e visualizar dados meteorológicos rápidos, confiáveis e em tempo real, a proveito da API OpenWeather. E utilizando um design responsivo e uma interface de usuário intuitiva, o aplicativo oferece uma experiência de usuário agradável e eficiente.
                                     </p>
                                     <div className={styles.projectLinksWrapReverse}>
                                         <a href="https://github.com/lucasecs92/weather-react/blob/main/weather/src/App.jsx" target="_blank" rel="noopener noreferrer" className={styles.githubIcon}><FiGithub/></a>
@@ -200,7 +202,8 @@ const Projects = () => {
                                 <motion.aside ref={ref4} animate={inView4 ? imgVariants.show : imgVariants.hidden} variants={imgVariants} className={styles.project4}>
                                     <h4 className={styles.projectName}>Jogo Número Secreto</h4>
                                     <ul className={styles.projectStackReverse}>
-                                        <li>JavaScript</li>
+                                        <li>JavaScript Vanilla</li>
+                                        <li>HTML</li>
                                         <li>CSS</li>
                                         <li>API</li>
                                     </ul>
