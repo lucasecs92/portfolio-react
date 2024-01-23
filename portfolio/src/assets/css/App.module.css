@@ -31,3 +31,7 @@ body {
 html {
     -ms-overflow-style: none;
 }
+
+main {
+    width: 100vw;
+}
