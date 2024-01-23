@@ -175,7 +175,7 @@
 @media (max-width: 718px) {
 
     .description {
-        height: 80vh;
+        /* height: 80vh; */
         width: auto;
         flex-direction: row;
     } 
