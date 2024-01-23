@@ -13,7 +13,7 @@
 
 .projects {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .projectsWrap {
@@ -291,6 +291,16 @@
 
     .projects {
         padding: 0;
+    }
+
+    .projectStack,
+    .projectStackReverse {
+        gap: 0.5rem;
+    }
+
+    .projectStackReverse li {
+        display: flex;
+        align-items: center;
     }
 
     .viewMoreBtn {
