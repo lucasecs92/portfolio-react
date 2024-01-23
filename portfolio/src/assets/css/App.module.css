@@ -31,3 +31,13 @@ body {
 html {
     -ms-overflow-style: none;
 }
+
+@media screen and (max-width: 500px) {
+    body::-webkit-scrollbar {
+        display: none;
+    }
+    body {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+}
