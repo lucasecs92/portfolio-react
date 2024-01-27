@@ -25,10 +25,9 @@
 
 body {
     background-color: var(--light);
-    overflow-x: hidden; 
+    /* overflow-x: hidden;  */
 }
 
 html {
     -ms-overflow-style: none;
 }
-
