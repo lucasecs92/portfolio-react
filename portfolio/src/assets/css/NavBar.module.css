@@ -2,7 +2,7 @@
     background-color: var(--light);
     position: fixed;
     z-index: 1000;
-    width: 100%;
+    width: calc(100% + 17px);
 }
 
 .navBarMain {
