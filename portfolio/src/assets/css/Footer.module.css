@@ -1,5 +1,5 @@
 .containerFooter {
-    width: 100vw;
+    width: calc(100vw + 17px);
     height: 15vh;
     background-color: var(--lightMode);
     display: flex;
@@ -40,6 +40,7 @@
     .containerFooter {
         display: block;
         text-align: center;
+        /* width: calc(100vw + 8rem); */
     }
     
     .footer {
