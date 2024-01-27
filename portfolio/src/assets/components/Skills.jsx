@@ -133,7 +133,7 @@ const Skills = () => {
                     >
                         <h4>O que eu posso fazer</h4>
                         <p>
-                            Como desenvolvedor especializado, possuo uma sólida base em Javascript, React, HTML e CSS. Meu objetivo é utilizar essa stack para criar aplicações web responsivas, dinâmicas, escaláveis e de fácil manutenção. Tenho a capacidade de gerar código eficiente e sustentável, adaptável às demandas em constante mudança de um negócio.
+                            Como desenvolvedor especializado, possuo uma sólida base em JavaScript, React, HTML e CSS. Meu objetivo é utilizar essa stack para criar aplicações web responsivas, dinâmicas, escaláveis e de fácil manutenção. Tenho a capacidade de gerar código eficiente e sustentável, adaptável às demandas em constante mudança de um negócio.
                         </p>
                     </motion.aside>
                     <motion.figure 

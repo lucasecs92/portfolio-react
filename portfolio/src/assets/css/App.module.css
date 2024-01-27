@@ -18,16 +18,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scrollbar-width: none;
+    /* scrollbar-width: none; */
     scroll-behavior: smooth;
     font-family: 'DM Sans', sans-serif;
 }
 
 body {
     background-color: var(--light);
-    overflow-x: hidden;
+    overflow-x: hidden; 
 }
 
 html {
     -ms-overflow-style: none;
 }
+
