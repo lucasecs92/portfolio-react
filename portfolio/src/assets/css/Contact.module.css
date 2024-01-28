@@ -1,6 +1,6 @@
 .containerContact {
     height: 100vh;
-    width: calc(100vw + 17px);
+    width: 100vw;
     padding: 4rem;
     color: var(--dark);
 

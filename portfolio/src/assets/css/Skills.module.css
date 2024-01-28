@@ -1,5 +1,5 @@
 .containerSkills {
-    width: calc(100vw + 17px);
+    width: 100vw;
     height: 100vh;
     padding: 6rem;
     background-color: var(--lightMode);

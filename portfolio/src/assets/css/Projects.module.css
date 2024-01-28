@@ -1,5 +1,5 @@
 .containerProjects {
-    width: calc(100vw + 17px);
+    width: 100vw;
     padding: 6rem;
     color: var(--dark);
 }

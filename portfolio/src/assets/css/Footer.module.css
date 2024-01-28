@@ -1,5 +1,5 @@
 .containerFooter {
-    width: calc(100vw + 17px);
+    width: 100vw;
     height: 15vh;
     background-color: var(--lightMode);
     display: flex;

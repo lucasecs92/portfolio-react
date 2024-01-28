@@ -1,6 +1,6 @@
 .containerHome {
     height: 100vh;
-    width: calc(100vw + 17px);
+    width: 100vw;
     background-color: var(--light);
     color: var(--dark);
     padding: 5rem;
