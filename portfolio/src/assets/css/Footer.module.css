@@ -1,5 +1,5 @@
 .containerFooter {
-    width: 100vw;
+    /* width: 100vw; */
     height: 15vh;
     background-color: var(--lightMode);
     display: flex;
@@ -58,6 +58,7 @@
 
     .socialIcons {
         padding-top: 1rem;
+        justify-content: center;
     }
 
     .socialItem {
