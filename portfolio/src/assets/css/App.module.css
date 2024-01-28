@@ -32,7 +32,7 @@ html {
     -ms-overflow-style: none;
 }
 
-@media screen and (max-width: 500px) {
+@media (max-width: 500px) {
     body {
         overflow-x: hidden;
     }
