@@ -25,15 +25,10 @@
 
 body {
     background-color: var(--light);
-    overflow-x: hidden; 
+    /* overflow-x: hidden;  */
 }
 
 html {
     -ms-overflow-style: none;
 }
 
-@media (max-width: 500px) {
-    body {
-        overflow-x: hidden;
-    }
-}
