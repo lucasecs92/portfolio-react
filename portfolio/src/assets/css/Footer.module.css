@@ -1,7 +1,10 @@
 .containerFooter {
     /* width: 100vw; */
-    height: 15vh;
     background-color: var(--lightMode);
+}
+
+.footerWrap {
+    height: 15vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -39,6 +42,10 @@
     color: var(--lightMode);
 }
 
+.darkMode .footerWrap {
+    color: var(--light);
+}
+
 @media (max-width: 500px) {
 
     .containerFooter {
@@ -47,12 +54,12 @@
         /* width: calc(100vw + 8rem); */
     }
     
-    .footer {
-        height: 20vh;
-        flex-direction: column-reverse;
+    .footerWrap {
+        flex-direction: column;
+        justify-content: normal;
     }
 
-    .footerInfo {
+    .footerWrap p {
         padding-top: 1rem;
     }
 
