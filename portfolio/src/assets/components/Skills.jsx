@@ -78,77 +78,77 @@ const Skills = () => {
         <>
             <section className={`${styles.containerSkills} ${themeContext.theme === 'dark' ? styles.darkMode : ''}`}>
 
-                <motion.section 
-                    className={styles.title}
-                    ref={titleRef}
-                    initial="hidden"
-                    animate={titleInView ? "visible" : "hidden"}
-                    variants={titleVariants}
-                >      
-                    <h2>MINHAS SKILLS</h2>
-                </motion.section>
-
-                <motion.ul               
-                    className={styles.techIcons}
-                    ref={techIconsRef}
-                    initial="hidden"
-                    animate={techIconsInView ? "visible" : "hidden"}
-                    variants={techIconsVariants}
-                >
-                    <li className={styles.techItems}>
-                        <BiLogoJavascript/>
-                    </li>
-                    <li className={styles.techItems}>
-                        <BiLogoTypescript/>
-                    </li>
-                    <li className={styles.techItems}>
-                        <FaGitAlt/>
-                    </li>
-                    <li className={styles.techItems}>
-                        <FaHtml5/>
-                    </li>
-                    <li className={styles.techItems}>
-                        <FaCss3Alt/>
-                    </li>
-                    <li className={styles.techItems}>
-                        <FaReact/>
-                    </li>
-                    <li className={styles.techItems}>
-                        <FaLinux/>
-                    </li>
-                    <li className={styles.techItems}>
-                        <TbBrandVscode/>
-                    </li>
-                </motion.ul>
-
-                <motion.section 
-                    className={styles.infoWrap}
-                    initial="hidden"
-                    animate={skillsInfoInView && qrCodeInView ? "visible" : "hidden"}
-                >
-                    <motion.aside 
-                        className={styles.skillsInfo}
-                        ref={skillsInfoRef}
-                        variants={skillsInfoVariants}
+                <section className={styles.skillsWrap}>
+                    <motion.section
+                        className={styles.title}
+                        ref={titleRef}
+                        initial="hidden"
+                        animate={titleInView ? "visible" : "hidden"}
+                        variants={titleVariants}
                     >
-                        <h4>O que eu posso fazer</h4>
-                        <p>
-                            Como desenvolvedor especializado, possuo uma sólida base em JavaScript, React, HTML e CSS. Meu objetivo é utilizar essa stack para criar aplicações web responsivas, dinâmicas, escaláveis e de fácil manutenção. Tenho a capacidade de gerar código eficiente e sustentável, adaptável às demandas em constante mudança de um negócio.
-                        </p>
-                    </motion.aside>
-                    <motion.figure 
-                        className={styles.qrCode}
-                        ref={qrCodeRef}
-                        variants={qrCodeVariants}
+                        <h2>MINHAS SKILLS</h2>
+                    </motion.section>
+                    <motion.ul
+                        className={styles.techIcons}
+                        ref={techIconsRef}
+                        initial="hidden"
+                        animate={techIconsInView ? "visible" : "hidden"}
+                        variants={techIconsVariants}
                     >
-                        <img src={themeContext.theme === 'dark' ? qrCodeDark : qrCode} alt="QR Code do meu currículo"/>
-                        <aside>
-                            <p>Meu</p>
-                            <p>Curriculum</p>
-                            <p>Vitae</p>
-                        </aside>
-                    </motion.figure>
-                </motion.section>
+                        <li className={styles.techItems}>
+                            <BiLogoJavascript/>
+                        </li>
+                        <li className={styles.techItems}>
+                            <BiLogoTypescript/>
+                        </li>
+                        <li className={styles.techItems}>
+                            <FaGitAlt/>
+                        </li>
+                        <li className={styles.techItems}>
+                            <FaHtml5/>
+                        </li>
+                        <li className={styles.techItems}>
+                            <FaCss3Alt/>
+                        </li>
+                        <li className={styles.techItems}>
+                            <FaReact/>
+                        </li>
+                        <li className={styles.techItems}>
+                            <FaLinux/>
+                        </li>
+                        <li className={styles.techItems}>
+                            <TbBrandVscode/>
+                        </li>
+                    </motion.ul>
+                    <motion.section
+                        className={styles.infoWrap}
+                        initial="hidden"
+                        animate={skillsInfoInView && qrCodeInView ? "visible" : "hidden"}
+                    >
+                        <motion.aside
+                            className={styles.skillsInfo}
+                            ref={skillsInfoRef}
+                            variants={skillsInfoVariants}
+                        >
+                            <h4>O que eu posso fazer</h4>
+                            <p>
+                                Como desenvolvedor especializado, possuo uma sólida base em JavaScript, React, HTML e CSS. Meu objetivo é utilizar essa stack para criar aplicações web responsivas, dinâmicas, escaláveis e de fácil manutenção. Tenho a capacidade de gerar código eficiente e sustentável, adaptável às demandas em constante mudança de um negócio.
+                            </p>
+                        </motion.aside>
+                        <motion.figure
+                            className={styles.qrCode}
+                            ref={qrCodeRef}
+                            variants={qrCodeVariants}
+                        >
+                            <img src={themeContext.theme === 'dark' ? qrCodeDark : qrCode} alt="QR Code do meu currículo"/>
+                            <aside>
+                                <p>Meu</p>
+                                <p>Curriculum</p>
+                                <p>Vitae</p>
+                            </aside>
+                        </motion.figure>
+                    </motion.section>
+                </section>
 
             </section>
         </>

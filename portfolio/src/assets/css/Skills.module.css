@@ -1,8 +1,11 @@
 .containerSkills {
     /* width: 100vw; */
+    background-color: var(--lightMode);
     height: 100vh;
     padding: 6rem;
-    background-color: var(--lightMode);
+}
+
+.skillsWrap {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,6 +77,10 @@
 
 .darkMode {
     background-color: var(--dark);
+    color: var(--lightMode);
+}
+
+.darkMode .skillsWrap {
     color: var(--lightMode);
 }
 
