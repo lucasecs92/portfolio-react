@@ -1,11 +1,12 @@
 .containerSkills {
-    /* width: 100vw; */
+    width: 100vw;
     background-color: var(--lightMode);
     height: 100vh;
     padding: 6rem;
 }
 
 .skillsWrap {
+    /* width: 100vw; */
     display: flex;
     flex-direction: column;
     justify-content: center;

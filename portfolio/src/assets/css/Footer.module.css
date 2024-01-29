@@ -1,9 +1,10 @@
 .containerFooter {
-    /* width: 100vw; */
+    width: 100vw;
     background-color: var(--lightMode);
 }
 
 .footerWrap {
+    /* width: 100vw; */
     height: 15vh;
     display: flex;
     justify-content: space-around;

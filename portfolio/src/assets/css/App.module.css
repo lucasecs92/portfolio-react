@@ -1,5 +1,5 @@
-/* ::-webkit-scrollbar {
-    width: 10px;
+::-webkit-scrollbar {
+    width: 15px;
 }
  
 ::-webkit-scrollbar-track {
@@ -12,7 +12,7 @@
  
 ::-webkit-scrollbar-thumb:hover {
     background: var(--darkMode);
-} */
+} 
 
 * {
     margin: 0;
@@ -27,8 +27,8 @@ body {
     background-color: var(--light);
     overflow-x: hidden;
 }
-
+/* 
 html {
     -ms-overflow-style: none;
-}
+} */
 
