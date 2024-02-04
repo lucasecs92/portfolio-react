@@ -12,6 +12,8 @@ import { motion } from 'framer-motion';
 import { useContext, useState } from 'react';
 
 import { FiGithub } from "react-icons/fi";
+import { TbArrowBigUpLines } from "react-icons/tb";
+
 
 const Projects = () => {
     // Acessando o contexto de tema para aplicar estilos condicionais.
@@ -130,7 +132,7 @@ const Projects = () => {
                                         A Book Store é uma aplicação web interativa, projetada para simular uma experiência de compra de livros online. A interface é composta por uma barra de navegação intuitiva com busca, acesso fácil ao carrinho de compras e opções de login. A página inicial apresenta alguns destaques, seções para lançamentos e best sellers, ambas com funcionalidade de adicionar livros ao carrinho, além de um convite para inscrição na Newsletter e um link para baixar o aplicativo da loja. O design é focado na usabilidade e na estética agradável, criando um ambiente convidativo para os usuários explorarem e comprarem livros. Este projeto demonstra habilidades em gerenciamento de estado e componentização no React, além de oferecer uma visão prática do desenvolvimento de e-commerce.
                                     </p>
                                     <a className={styles.viewMoreBtn} onClick={toggleFirstDescription}>
-                                        {isFirstDescriptionExpanded ? 'Ver menos' : 'Ler mais'}
+                                        {isFirstDescriptionExpanded ? <TbArrowBigUpLines/> : 'Ler mais'}
                                     </a>
 
                                     <div className={styles.projectLinksWrap}>
@@ -183,7 +185,7 @@ const Projects = () => {
                                         O To Do List é uma aplicação web que oferece uma maneira simples e eficaz de gerenciar tarefas diárias. Com uma interface limpa e funcionalidades intuitivas, os usuários podem adicionar, editar, remover e marcar tarefas como concluídas com facilidade, assim sendo classificado como CRUD. O projeto demonstra o uso de estados e efeitos em React, além de práticas de desenvolvimento como a componentização e a gestão de estados locais e globais. O To Do List é uma ferramenta versátil que ajuda os usuários a manterem-se organizados e produtivos.
                                     </p>
                                     <a className={styles.viewMoreBtn} onClick={toggleThirdDescription}>
-                                        {isThirdDescriptionExpanded ? 'Ver menos' : 'Ler mais'}
+                                        {isThirdDescriptionExpanded ? <TbArrowBigUpLines/> : 'Ler mais'}
                                     </a>
 
                                     <div className={styles.projectLinksWrap}>
@@ -210,7 +212,7 @@ const Projects = () => {
                                     <p className={`${styles.projectDescription} ${isFourthDescriptionExpanded ? styles.expanded : ''}`}> 
                                         Um jogo interativo de adivinhação que desafia os jogadores a descobrir um número secreto usando apenas suas vozes. Este jogo combina a adivinhação com a tecnologia moderna de reconhecimento de voz, proporcionando uma experiência única. Utilizando a API Web Speech para reconhecimento de voz, o jogo oferece uma maneira inovadora e acessível de jogar, permitindo que os jogadores interajam diretamente com o jogo falando seus palpites.
                                     </p>
-                                    <a className={styles.viewMoreBtn} onClick={toggleFourthDescription}>                            {isFourthDescriptionExpanded ? 'Ver menos' : 'Ler mais'}
+                                    <a className={styles.viewMoreBtn} onClick={toggleFourthDescription}>                            {isFourthDescriptionExpanded ? <TbArrowBigUpLines/> : 'Ler mais'}
                                     </a>
                                     <div className={styles.projectLinksWrapReverse}>
                                         <a href="https://github.com/lucasecs92/jogo-numero-secreto/blob/main/index.html" target="_blank" rel="noopener noreferrer" className={styles.githubIcon}><FiGithub/></a>
