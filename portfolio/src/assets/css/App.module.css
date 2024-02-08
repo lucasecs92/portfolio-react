@@ -32,3 +32,22 @@ html {
     -ms-overflow-style: none;
 } */
 
+.privacidade {
+    position: fixed; 
+    bottom: 35px; 
+    left: 20px;
+    z-index: 1000;
+}
+
+.privacidade svg {
+    font-size: 3rem;
+    color: var(--dark);
+}
+/* 
+.cookies {
+    position: fixed; 
+    bottom: 35px; 
+    left: 20px;
+    z-index: 1000;
+} */
+

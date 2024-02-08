@@ -8,6 +8,9 @@ import Projects from './assets/components/Projects';
 import Contact from './assets/components/Contact';
 import Footer from './assets/components/Footer';
 
+// import { RiGitRepositoryPrivateLine } from "react-icons/ri";
+import { FcPrivacy } from "react-icons/fc";
+
 // Importando hooks do React
 import { useEffect, useRef, useState } from 'react';
 // Importando o contexto de tema
@@ -39,6 +42,30 @@ function App() {
                 <div ref={skillsRef}><Skills/></div>
                 <div ref={projectsRef}><Projects/></div>
                 <div ref={contactRef}><Contact/></div>
+
+                <div className={styles.privacidade}>
+                  <a href="https://www.iubenda.com/privacy-policy/50506132" className="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe" title="Política de Privacidade" target="_blank" rel="noopener noreferrer">
+                    <FcPrivacy />
+                  </a>
+                  <div dangerouslySetInnerHTML={{ __html: `
+                    <script type="text/javascript">
+                      (function (w, d) {
+                        var loader = function () {
+                          var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0];
+                          s.src = "https://cdn.iubenda.com/iubenda.js";
+                          tag.parentNode.insertBefore(s, tag);
+                        };
+                        if (w.addEventListener) {
+                          w.addEventListener("load", loader, false);
+                        } else if (w.attachEvent) {
+                          w.attachEvent("onload", loader);
+                        } else {
+                          w.onload = loader;
+                        }
+                      })(window, document);
+                    </script>
+                  ` }} />
+                </div>
               </main>
               <footer>
                  <Footer/>
