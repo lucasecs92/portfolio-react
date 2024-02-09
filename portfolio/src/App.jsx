@@ -12,7 +12,7 @@ import Footer from './assets/components/Footer';
 import { useEffect, useRef, useState } from 'react';
 // Importando o contexto de tema
 import ThemeContext from './contexts/ThemeContext';
-import Policy from './assets/components/Policy';
+// import Policy from './assets/components/Policy';
 
 function App() {
   // Inicializando o estado do tema com o valor armazenado no localStorage ou 'light' se nada estiver definido
@@ -41,7 +41,7 @@ function App() {
                 <div ref={projectsRef}><Projects/></div>
                 <div ref={contactRef}><Contact/></div>
                 
-                <Policy/>
+                {/* <Policy/> */}
               </main>
               <footer>
                  <Footer/>

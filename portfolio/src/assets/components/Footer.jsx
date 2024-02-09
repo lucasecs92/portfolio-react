@@ -1,9 +1,10 @@
 import styles from '../css/Footer.module.css';
+import { useContext } from 'react';
 
 import { BiLogoLinkedin } from "react-icons/bi";
 import { FiGithub } from "react-icons/fi";
 import ThemeContext from '../../contexts/ThemeContext';
-import { useContext } from 'react';
+import Policy from './Policy';
 
 const Footer = () => {
     const themeContext = useContext(ThemeContext);
@@ -14,7 +15,11 @@ const Footer = () => {
 
                 <section className={styles.footerWrap}>
 
-                    <p>Created by <span>Lucas Eduardo</span>.</p>
+                    <section className={styles.footerLeft}>
+                        <Policy/>
+                        <p>| Created by <span>Lucas Eduardo</span>.</p>
+                    </section>
+                    
                     <section className={styles.socialIcons}>
                         <a className={styles.socialItem} href="https://www.linkedin.com/in/lucas-eduardo-cavalcante/" target='_blank' rel='noopener noreferrer'><BiLogoLinkedin/></a>
                         <a className={styles.socialItem} href="https://github.com/lucasecs92" target='_blank' rel='noopener noreferrer'><FiGithub/></a>

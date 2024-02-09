@@ -1,25 +1,48 @@
-import { useContext } from 'react';
-
-import { MdOutlinePrivacyTip } from "react-icons/md"
-
+import { useContext, useState } from 'react';
 import ThemeContext from '../../contexts/ThemeContext';
+
+import styles from '../css/Policy.module.css';
 
 const Policy = () => {
 
     const themeContext = useContext(ThemeContext);
     const isDarkMode = themeContext.theme === 'dark';
+    const [isHovered, setIsHovered] = useState(false);
+
+    const handleMouseEnter = () => {
+        setIsHovered(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+    };
+
+    const anchorStyle = {
+        color: isDarkMode ? 'var(--light)' : 'var(--dark)',
+        textDecoration: 'none',
+        position: 'relative', // Adicionado para posicionar o pseudo-elemento
+    };
+
+    const hoverStyle = {
+        // color: 'red',
+        textDecoration: 'underline',
+    };
+    
 
     return (
         <>
-            <section style={{
-                position: 'fixed',
-                bottom: '30px',
-                left: '25px',
-                zIndex:  1000,
-                fontSize: '2rem',
-            }}>
-                <a href="https://www.iubenda.com/privacy-policy/50506132" className="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe" title="Política de Privacidade" target="_blank" rel="noopener noreferrer">
-                <MdOutlinePrivacyTip style={{ color: isDarkMode ? 'var(--lightMode)' : 'var(--darkMode)' }}/>
+            <section className={styles.containerPolicy}>
+                <a 
+                    href="https://www.iubenda.com/privacy-policy/50506132" 
+                    className="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe" 
+                    title="Política de Privacidade" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    style={isHovered ? {...anchorStyle, ...hoverStyle} : anchorStyle}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    Políticas de Privacidade
                 </a>
                 <div dangerouslySetInnerHTML={{ __html: `
                     <script type="text/javascript">
