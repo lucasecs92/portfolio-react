@@ -1,8 +1,8 @@
 .containerSkills {
     width: 100vw;
     background-color: var(--lightMode);
-    height: 100vh;
-    padding: 6rem;
+    /* height: 100vh; */
+    padding: 6rem 18rem;
 }
 
 .skillsWrap {
@@ -36,7 +36,7 @@
 
 .infoWrap {
     display: flex;
-    gap: 9rem;
+    gap: 14rem;
     margin-top: 1rem;
 }
 
@@ -89,10 +89,19 @@
     border-color: var(--lightMode);
 }   
 
+
+@media (max-width: 1660px) {
+
+    .containerSkills {
+        padding: 6rem 10rem;
+    }
+}
+
 @media (max-width: 1200px) {
 
     .infoWrap {
         gap: 7rem;
+        align-items: center;
     }
 
     .qrCode {

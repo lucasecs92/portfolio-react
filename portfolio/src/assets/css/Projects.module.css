@@ -1,6 +1,6 @@
 .containerProjects {
     width: 100vw;
-    padding: 6rem;
+    padding: 6rem 18rem;
     color: var(--dark);
 }
 
@@ -207,6 +207,13 @@
 
 .darkMode .projectStack li, .darkMode .projectStackReverse li {
     border-color: var(--lightMode);
+}
+
+@media (max-width: 1660px) {
+
+    .containerProjects {
+        padding: 6rem 10rem;
+    }
 }
 
 @media (max-width: 1195px) {
