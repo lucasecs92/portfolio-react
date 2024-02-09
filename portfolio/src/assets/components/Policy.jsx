@@ -1,14 +1,25 @@
-import styles from '../css/Policy.module.css';
+import { useContext } from 'react';
 
 import { MdOutlinePrivacyTip } from "react-icons/md"
 
+import ThemeContext from '../../contexts/ThemeContext';
+
 const Policy = () => {
+
+    const themeContext = useContext(ThemeContext);
+    const isDarkMode = themeContext.theme === 'dark';
 
     return (
         <>
-            <section className={styles.privacidade}>
+            <section style={{
+                position: 'fixed',
+                bottom: '30px',
+                left: '25px',
+                zIndex:  1000,
+                fontSize: '2rem',
+            }}>
                 <a href="https://www.iubenda.com/privacy-policy/50506132" className="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe" title="Política de Privacidade" target="_blank" rel="noopener noreferrer">
-                <MdOutlinePrivacyTip />
+                <MdOutlinePrivacyTip style={{ color: isDarkMode ? 'var(--lightMode)' : 'var(--darkMode)' }}/>
                 </a>
                 <div dangerouslySetInnerHTML={{ __html: `
                     <script type="text/javascript">
