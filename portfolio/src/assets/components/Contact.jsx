@@ -59,7 +59,7 @@ const Contact = () => {
                     <motion.h1 variants={fromBottomVariants}>MEU CONTATO</motion.h1>
                     <motion.h3 variants={fromBottomVariants}>Entre em contato comigo aqui</motion.h3>
                     <form className={styles.contactForm} onSubmit={handleSubmit} autoComplete="off">
-                    <motion.label htmlFor="nome" variants={fromBottomVariants}>Nome</motion.label>
+                        <motion.label htmlFor="nome" variants={fromBottomVariants}>Nome</motion.label>
                         <motion.input type="text" id="nome" name='name' placeholder='Digite seu nome' className={styles.inputs} onChange={handleChange} required variants={fromBottomVariants}/>
 
                         <motion.label htmlFor="email" variants={fromBottomVariants}>Email</motion.label>
