@@ -21,7 +21,7 @@ const Footer = () => {
                     </section>
                     
                     <section className={styles.socialIcons}>
-                        <a className={styles.socialItem} href="https://www.linkedin.com/in/lucas-eduardo-cavalcante/" target='_blank' rel='noopener noreferrer'><BiLogoLinkedin/></a>
+                        <a className={styles.socialItem} href="https://www.linkedin.com/in/lucasecs/" target='_blank' rel='noopener noreferrer'><BiLogoLinkedin/></a>
                         <a className={styles.socialItem} href="https://github.com/lucasecs92" target='_blank' rel='noopener noreferrer'><FiGithub/></a>
                     </section>
                     

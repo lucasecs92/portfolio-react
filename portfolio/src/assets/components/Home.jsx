@@ -57,7 +57,7 @@ const Home = () => {
                         <section className={styles.socialMedia}>
                             <ul className={styles.socialList}>
                                 <li>
-                                    <a href="https://www.linkedin.com/in/lucas-eduardo-cavalcante/" target="_blank" rel="noopener noreferrer"><BiLogoLinkedin/></a>
+                                    <a href="https://www.linkedin.com/in/lucasecs/" target="_blank" rel="noopener noreferrer"><BiLogoLinkedin/></a>
                                 </li>
 
                                 <li>
