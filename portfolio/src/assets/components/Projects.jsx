@@ -13,7 +13,7 @@ import { useContext, useState } from 'react';
 
 import { FiGithub } from "react-icons/fi";
 import { TbArrowBigUpLines } from "react-icons/tb";
-
+import { IoEye } from "react-icons/io5";
 
 const Projects = () => {
     // Acessando o contexto de tema para aplicar estilos condicionais.
@@ -136,10 +136,12 @@ const Projects = () => {
                                     </a>
 
                                     <div className={styles.projectLinksWrap}>
-                                        <a className={styles.projectBtn} href="https://bookstore-l.vercel.app/" target='_blank' rel='noopener noreferrer'>
-                                            Visualizar Website
+                                        <a className={styles.projectDeploy} href="https://bookstore-l.vercel.app/" target='_blank' rel='noopener noreferrer'>
+                                            <IoEye/> <span>Deploy</span>
                                         </a>
-                                        <a href="https://github.com/lucasecs92/book-store-react/blob/main/book-store/src/App.jsx" target="_blank" rel="noopener noreferrer" className={styles.githubIcon}><FiGithub/></a>
+                                        <a className={styles.githubIcon} href="https://github.com/lucasecs92/book-store-react/blob/main/book-store/src/App.jsx" target='_blank' rel='noopener noreferrer'>
+                                            <FiGithub/> <span>GitHub</span>
+                                        </a>
                                     </div>
                                 </motion.aside>
                                 <motion.figure ref={refImg1} animate={inViewImg1 ? "show" : "hidden"} variants={imgVariants} className={styles.projectImg}
@@ -161,9 +163,11 @@ const Projects = () => {
                                         O Weather App é uma aplicação interativa que permite aos usuários pesquisar e visualizar dados meteorológicos rápidos, confiáveis e em tempo real, a proveito da API OpenWeather. E utilizando um design responsivo e uma interface de usuário intuitiva, o aplicativo oferece uma experiência de usuário agradável e eficiente.
                                     </p>
                                     <div className={styles.projectLinksWrapReverse}>
-                                        <a href="https://github.com/lucasecs92/weather-react/blob/main/weather/src/App.jsx" target="_blank" rel="noopener noreferrer" className={styles.githubIcon}><FiGithub/></a>
-                                        <a className={styles.projectBtnReverse} href="https://weather-l.vercel.app/" target='_blank' rel='noopener noreferrer'>
-                                            Visualizar Website
+                                        <a className={styles.projectDeploy} href="https://weather-l.vercel.app/" target='_blank' rel='noopener noreferrer'>
+                                            <IoEye/> <span>Deploy</span>
+                                        </a>
+                                        <a className={styles.githubIcon} href="https://github.com/lucasecs92/weather-react/blob/main/weather/src/App.jsx" target='_blank' rel='noopener noreferrer'>
+                                            <FiGithub/> <span>GitHub</span>
                                         </a>
                                     </div>
                                 </motion.aside>
@@ -189,10 +193,12 @@ const Projects = () => {
                                     </a>
 
                                     <div className={styles.projectLinksWrap}>
-                                        <a className={styles.projectBtn} href="https://todolist-l.vercel.app/" target='_blank' rel='noopener noreferrer'>
-                                            Visualizar Website
+                                        <a className={styles.projectDeploy} href="https://todolist-l.vercel.app/" target='_blank' rel='noopener noreferrer'>
+                                            <IoEye/> <span>Deploy</span>
                                         </a>
-                                        <a href="https://github.com/lucasecs92/to-do-list/blob/main/todolist/src/App.tsx" target="_blank" rel="noopener noreferrer" className={styles.githubIcon}><FiGithub/></a>
+                                        <a className={styles.githubIcon} href="https://github.com/lucasecs92/to-do-list/blob/main/todolist/src/App.tsx" target='_blank' rel='noopener noreferrer'>
+                                            <FiGithub/> <span>GitHub</span>
+                                        </a>
                                     </div>
                                 </motion.aside>
                                 <motion.figure ref={refImg3} animate={inViewImg3 ? "show" : "hidden"} variants={imgVariants} className={styles.projectImg}>
@@ -215,9 +221,11 @@ const Projects = () => {
                                     <a className={styles.viewMoreBtn} onClick={toggleFourthDescription}>                            {isFourthDescriptionExpanded ? <TbArrowBigUpLines/> : 'Ler mais'}
                                     </a>
                                     <div className={styles.projectLinksWrapReverse}>
-                                        <a href="https://github.com/lucasecs92/jogo-numero-secreto/blob/main/index.html" target="_blank" rel="noopener noreferrer" className={styles.githubIcon}><FiGithub/></a>
-                                        <a className={styles.projectBtnReverse} href="https://jogo-numero-secreto-l.vercel.app/" target='_blank' rel='noopener noreferrer'>
-                                            Visualizar Website
+                                        <a className={styles.projectDeploy} href="https://jogo-numero-secreto-l.vercel.app/" target='_blank' rel='noopener noreferrer'>
+                                            <IoEye/> <span>Deploy</span>
+                                        </a>
+                                        <a className={styles.githubIcon} href="https://github.com/lucasecs92/jogo-numero-secreto/blob/main/index.html" target='_blank' rel='noopener noreferrer'>
+                                            <FiGithub/> <span>GitHub</span>
                                         </a>
                                     </div>
                                 </motion.aside>
