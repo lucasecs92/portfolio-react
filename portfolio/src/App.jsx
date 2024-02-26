@@ -40,7 +40,6 @@ function App() {
                 <div ref={skillsRef}><Skills/></div>
                 <div ref={projectsRef}><Projects/></div>
                 <div ref={contactRef}><Contact/></div>
-                
                 {/* <Policy/> */}
               </main>
               <footer>
