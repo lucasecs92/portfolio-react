@@ -17,7 +17,7 @@ const Footer = () => {
 
                     <section className={styles.footerLeft}>
                         <Policy/>
-                        <p>| Created by <span>Lucas Eduardo</span>.</p>
+                        <p><span className={styles.spanPipe}>|</span> Created by <span>Lucas Eduardo</span>.</p>
                     </section>
                     
                     <section className={styles.socialIcons}>

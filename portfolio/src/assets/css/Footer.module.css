@@ -72,13 +72,17 @@
         padding: 10px 0;
     }
 
-    .footerWrap p {
+    /* .footerWrap p {
         padding-top: 1rem;
-    }
+    } */
 
     .footerLeft {
         flex-direction: column;
         align-items: center;
+    }
+
+    .spanPipe {
+        display: none;
     }
 
     .socialIcons {

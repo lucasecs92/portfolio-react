@@ -158,6 +158,10 @@
 }
 
 @media (max-width: 1070px) {    
+    .containerHome {
+        padding: 5rem;
+    }
+
     .description {
         flex-direction: column;
     }
@@ -175,16 +179,9 @@
     }
 }
 
-/* @media (max-width: 935px) {
-    .descriptionText h1 {
-        font-size: 3.1rem;
-    }
-} */
-
 @media (max-width: 718px) {
 
     .description {
-        /* height: 80vh; */
         width: auto;
         flex-direction: row;
     } 
@@ -192,6 +189,9 @@
     .descriptionText {
         flex-basis: auto;
         padding: 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .greeting {
@@ -233,12 +233,8 @@
 
 @media (max-width: 500px) {
 
-    .containerHome {
-        padding: 5rem 0;
-    }
-
     .smallDescription {
-        padding: 2rem;
+        padding: 2rem 0;
     }
 
  }
