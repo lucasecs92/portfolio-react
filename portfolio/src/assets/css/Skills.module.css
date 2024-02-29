@@ -98,6 +98,11 @@
 
 @media (max-width: 1200px) {
 
+    .techIcons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .infoWrap {
         gap: 5rem;
         align-items: center;
@@ -123,8 +128,6 @@
 
     .techIcons {
         height: auto;
-        flex-wrap: wrap;
-        justify-content: center;
         margin: 1rem;
     }
 

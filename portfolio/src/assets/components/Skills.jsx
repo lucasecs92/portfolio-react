@@ -1,9 +1,10 @@
 import styles from '../css/Skills.module.css';
 
 // Ícones
-import { FaCss3Alt, FaGitAlt, FaHtml5, FaLinux, FaReact } from "react-icons/fa";
+import { FaCss3Alt, FaGitAlt, FaHtml5, FaNpm, FaReact, FaUbuntu } from "react-icons/fa";
 import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
 import { TbBrandVscode } from "react-icons/tb";
+import { SiCanva } from "react-icons/si";
 
 // Importação do contexto de tema
 import ThemeContext from '../../contexts/ThemeContext';
@@ -114,10 +115,16 @@ const Skills = () => {
                             <FaReact/>
                         </li>
                         <li className={styles.techItems}>
-                            <FaLinux/>
+                            <FaUbuntu/>
                         </li>
                         <li className={styles.techItems}>
                             <TbBrandVscode/>
+                        </li>
+                        <li className={styles.techItems}>
+                            <FaNpm />
+                        </li>
+                        <li className={styles.techItems}>
+                            <SiCanva />
                         </li>
                     </motion.ul>
                     <motion.section
