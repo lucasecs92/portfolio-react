@@ -1,7 +1,7 @@
 /* ::-webkit-scrollbar {
     width: 15px;
-}
-*/
+}   */
+
 ::-webkit-scrollbar-track {
     background: var(--light);
 }
@@ -20,13 +20,24 @@
     font-family: 'DM Sans', sans-serif;
 }
 
-body, html {
-    background-color: var(--light);
+html {
     overflow-x: hidden;
 }
 
+/* body, html {
+    background-color: var(--light);
+    overflow-x: hidden;
+} */
+@media (max-width: 1300px) {
+  
+    body {
+        overflow-x: clip;
+    }
+    
+} 
 /* 
+
 html {
     -ms-overflow-style: none;
-}  */
+}   */
 

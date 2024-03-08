@@ -102,7 +102,6 @@ const Skills = () => {
                             title="HTML5" 
                             placement='top' 
                             arrow
-                            sx={{ backgroundColor: 'red', color: 'white' }}
                         >
                             <li className={styles.techItems}>
                                 <FaHtml5/>
