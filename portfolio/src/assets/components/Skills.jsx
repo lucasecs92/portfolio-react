@@ -1,5 +1,7 @@
 import styles from '../css/Skills.module.css';
 
+import Tooltip from '@mui/material/Tooltip';
+
 // Ícones
 import { FaCss3Alt, FaGitAlt, FaHtml5, FaNpm, FaReact, FaSass, FaUbuntu } from "react-icons/fa";
 import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
@@ -96,12 +98,27 @@ const Skills = () => {
                         animate={techIconsInView ? "visible" : "hidden"}
                         variants={techIconsVariants}
                     >
-                        <li className={styles.techItems}>
-                            <FaHtml5/>
-                        </li>
-                        <li className={styles.techItems}>
-                            <FaCss3Alt/>
-                        </li>
+                        <Tooltip 
+                            title="HTML5" 
+                            placement='top' 
+                            arrow
+                            sx={{ backgroundColor: 'red', color: 'white' }}
+                        >
+                            <li className={styles.techItems}>
+                                <FaHtml5/>
+                            </li>
+                        </Tooltip>
+
+                        <Tooltip 
+                            title="CSS3" 
+                            placement='top' 
+                            arrow
+                        >
+                            <li className={styles.techItems}>
+                                <FaCss3Alt/>
+                            </li>
+                        </Tooltip>
+                        
                         <li className={styles.techItems}>
                             <FaGitAlt/>
                         </li>
