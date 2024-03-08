@@ -1,10 +1,10 @@
 import styles from '../css/Skills.module.css';
 
 // Ícones
-import { FaCss3Alt, FaGitAlt, FaHtml5, FaNpm, FaReact, FaUbuntu } from "react-icons/fa";
+import { FaCss3Alt, FaGitAlt, FaHtml5, FaNpm, FaReact, FaSass, FaUbuntu } from "react-icons/fa";
 import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
 import { TbBrandVscode } from "react-icons/tb";
-import { SiCanva } from "react-icons/si";
+import { SiCanva, SiGimp } from "react-icons/si";
 
 // Importação do contexto de tema
 import ThemeContext from '../../contexts/ThemeContext';
@@ -97,34 +97,40 @@ const Skills = () => {
                         variants={techIconsVariants}
                     >
                         <li className={styles.techItems}>
-                            <BiLogoJavascript/>
-                        </li>
-                        <li className={styles.techItems}>
-                            <BiLogoTypescript/>
-                        </li>
-                        <li className={styles.techItems}>
-                            <FaGitAlt/>
-                        </li>
-                        <li className={styles.techItems}>
                             <FaHtml5/>
                         </li>
                         <li className={styles.techItems}>
                             <FaCss3Alt/>
                         </li>
                         <li className={styles.techItems}>
+                            <FaGitAlt/>
+                        </li>
+                        <li className={styles.techItems}>
+                            <BiLogoJavascript/>
+                        </li>
+                        <li className={styles.techItems}>
+                            <BiLogoTypescript/>
+                        </li>
+                        <li className={styles.techItems}>
                             <FaReact/>
+                        </li>
+                        <li className={styles.techItems}>
+                            <FaSass/>
+                        </li>
+                        <li className={styles.techItems}>
+                            <SiGimp/>
                         </li>
                         <li className={styles.techItems}>
                             <FaUbuntu/>
                         </li>
                         <li className={styles.techItems}>
-                            <TbBrandVscode/>
+                            <SiCanva />
                         </li>
                         <li className={styles.techItems}>
                             <FaNpm />
                         </li>
                         <li className={styles.techItems}>
-                            <SiCanva />
+                            <TbBrandVscode/>
                         </li>
                     </motion.ul>
                     <motion.section
