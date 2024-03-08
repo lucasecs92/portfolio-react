@@ -1,15 +1,13 @@
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 15px;
 }
- 
+*/
 ::-webkit-scrollbar-track {
     background: var(--light);
 }
- 
 ::-webkit-scrollbar-thumb {
     background: var(--lightMode);
 }
- 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--darkMode);
 } 
@@ -23,12 +21,13 @@
     font-family: 'DM Sans', sans-serif;
 }
 
-body {
+body, html {
     background-color: var(--light);
     overflow-x: hidden;
 }
+
 /* 
 html {
     -ms-overflow-style: none;
-} */
+}  */
 

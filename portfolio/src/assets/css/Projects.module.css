@@ -207,7 +207,7 @@
 @media (max-width: 1660px) {
 
     .containerProjects {
-        padding: 6rem 10rem;
+        padding: 6rem;
     }
 }
 
@@ -262,6 +262,13 @@
     }
     .darkMode .projectsWrap {
         border-color: var(--lightMode);
+    }
+}
+
+@media (max-width: 755px) {
+    
+    .projectHeader h2 {
+        font-size: 2rem;
     }
 }
 
