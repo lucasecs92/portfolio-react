@@ -118,36 +118,96 @@ const Skills = () => {
                             </li>
                         </Tooltip>
                         
-                        <li className={styles.techItems}>
-                            <FaGitAlt/>
-                        </li>
-                        <li className={styles.techItems}>
-                            <BiLogoJavascript/>
-                        </li>
-                        <li className={styles.techItems}>
-                            <BiLogoTypescript/>
-                        </li>
-                        <li className={styles.techItems}>
-                            <FaReact/>
-                        </li>
-                        <li className={styles.techItems}>
-                            <FaSass/>
-                        </li>
-                        <li className={styles.techItems}>
-                            <SiGimp/>
-                        </li>
-                        <li className={styles.techItems}>
-                            <FaUbuntu/>
-                        </li>
-                        <li className={styles.techItems}>
-                            <SiCanva />
-                        </li>
-                        <li className={styles.techItems}>
-                            <FaNpm />
-                        </li>
-                        <li className={styles.techItems}>
-                            <TbBrandVscode/>
-                        </li>
+                        <Tooltip
+                            title="Git" 
+                            placement='top' 
+                            arrow
+                        >
+                            <li className={styles.techItems}>
+                                <FaGitAlt/>
+                            </li>
+                        </Tooltip>
+                        <Tooltip
+                            title="JavaScript" 
+                            placement='top' 
+                            arrow
+                        >
+                            <li className={styles.techItems}>
+                                <BiLogoJavascript/>
+                            </li>
+                        </Tooltip>
+                        <Tooltip
+                            title="TypeScript" 
+                            placement='top' 
+                            arrow
+                        >
+                            <li className={styles.techItems}>
+                                <BiLogoTypescript/>
+                            </li>
+                        </Tooltip>
+                        <Tooltip
+                            title="React" 
+                            placement='top' 
+                            arrow
+                        >
+                            <li className={styles.techItems}>
+                                <FaReact/>
+                            </li>
+                        </Tooltip>
+                        <Tooltip
+                            title="Sass" 
+                            placement='top' 
+                            arrow
+                        >
+                            <li className={styles.techItems}>
+                                <FaSass/>
+                            </li>
+                        </Tooltip>
+                        <Tooltip
+                            title="Gimp" 
+                            placement='top' 
+                            arrow
+                        >
+                            <li className={styles.techItems}>
+                                <SiGimp/>
+                            </li>
+                        </Tooltip>
+                        <Tooltip
+                            title="Ubuntu" 
+                            placement='top' 
+                            arrow
+                        >
+                            <li className={styles.techItems}>
+                                <FaUbuntu/>
+                            </li>
+                        </Tooltip>
+                        <Tooltip
+                            title="Canva" 
+                            placement='top' 
+                            arrow
+                        >
+                            <li className={styles.techItems}>
+                                <SiCanva />
+                            </li>
+                        </Tooltip>
+                        <Tooltip
+                            title="npm" 
+                            placement='top' 
+                            arrow
+                        >
+                            <li className={styles.techItems}>
+                                <FaNpm />
+                            </li>
+                        </Tooltip>
+                        <Tooltip
+                            title="Visual Studio Code" 
+                            placement='top' 
+                            arrow
+                        >
+                            <li className={styles.techItems}>
+                                <TbBrandVscode/>
+                            </li>
+                        </Tooltip>
                     </motion.ul>
                     <motion.section
                         className={styles.infoWrap}
