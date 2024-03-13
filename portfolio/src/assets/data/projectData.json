@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "name": "Book Store",
         "image": "../images/bookstore.png",
         "stack": ["React", "JavaScript", "HTML", "CSS"],
@@ -8,6 +9,7 @@
         "github": "https://github.com/lucasecs92/book-store-react/blob/main/book-store/src/App.jsx"
     },
     {
+        "id": 2,
         "name": "Weather App",
         "image": "../images/weather.png",
         "stack": ["React JS", "HTML", "CSS", "API"],
@@ -16,6 +18,7 @@
         "github": "https://github.com/lucasecs92/weather-react/blob/main/weather/src/App.jsx"
     },
     {
+        "id": 3,
         "name": "To Do List",
         "image": "../images/todolist.png",
         "stack": ["TypeScript", "React", "CSS"],
@@ -24,6 +27,7 @@
         "github": "https://github.com/lucasecs92/to-do-list/blob/main/todolist/src/App.tsx"
     },
     {
+        "id": 4,
         "name": "Jogo Número Secreto",
         "image": "../images/jogo-numero-secreto.png",
         "stack": ["JavaScript Vanilla", "HTML", "CSS", "API"],
