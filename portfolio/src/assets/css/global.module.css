@@ -4,6 +4,7 @@
 @font-face {
     font-family: 'MinhaFonte';
     src: url('../fonts/StudyAlone.otf') format('opentype');
+    font-display: swap;
 }
 /* font-family: 'MinhaFonte', sans-serif; */
 

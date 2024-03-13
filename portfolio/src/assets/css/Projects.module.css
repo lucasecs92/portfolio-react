@@ -167,6 +167,7 @@
 
 .projectImg, .projectImgReverse {
     width: 100%;
+    height: auto;
 }
 
 .projectImg img, .projectImgReverse img {
@@ -175,7 +176,7 @@
     display: block;
     background-attachment: fixed;
     width: 100%;
-    height: 330px;
+    height: auto;
 }
 
 /* DARK MODE */
