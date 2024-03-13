@@ -4,11 +4,11 @@
     color: var(--dark);
 }
 
-.projectHeader h4 {
+.projectHeader h2 {
     font-size: 1.5rem;
 }
 
-.projectHeader h2 {
+.projectHeader h3 {
     font-size: 3rem;
 }
 

@@ -15,6 +15,8 @@ import { FiGithub } from "react-icons/fi";
 import { TbArrowBigUpLines } from "react-icons/tb";
 import { IoEye } from "react-icons/io5";
 
+import projectData from '../data/projectData.json';
+
 const Projects = () => {
     // Acessando o contexto de tema para aplicar estilos condicionais.
     const themeContext = useContext(ThemeContext);
@@ -78,10 +80,10 @@ const Projects = () => {
     const headerVariants = {
         hidden: { y: -50, opacity: 0 },
         visible: { 
-            y: 0,
-            opacity: 1,
-            transition: { duration: 1.5, ease: "easeOut" }
-        }
+        y: 0,
+        opacity: 1,
+        transition: { duration: 1.5, ease: "easeOut" }
+    }
     };
     
     const projectsVariants = {
@@ -109,131 +111,148 @@ const Projects = () => {
                         animate={headerInView ? "visible" : "hidden"}
                         variants={headerVariants}
                     >
-                            <h4>MEUS PROJETOS</h4>
-                            <h2>O que eu desenvolvi</h2>
+                            <h2>MEUS PROJETOS</h2>
+                            <h3>O que eu desenvolvi</h3>
                     </motion.section>
 
                     <section className={styles.projects}>
-                            <section className={styles.projectsWrap}>
-                                <motion.aside 
-                                    ref={ref1} 
-                                    animate={inView1 ? variants.show : variants.hidden} 
-                                    variants={variants} 
-                                    className={styles.project1}
-                                >
-                                    <h4 className={styles.projectName}>Book Store</h4>
-                                    <ul className={styles.projectStack}>
-                                        <li>React</li>
-                                        <li>JavaScript</li>
-                                        <li>HTML</li>
-                                        <li>CSS</li>
-                                    </ul>
-                                    <p className={`${styles.projectDescription} ${isFirstDescriptionExpanded ? styles.expanded : ''}`}>
-                                        A Book Store é uma aplicação web interativa, projetada para simular uma experiência de compra de livros online. A interface é composta por uma barra de navegação intuitiva com busca, acesso fácil ao carrinho de compras e opções de login. A página inicial apresenta alguns destaques, seções para lançamentos e best sellers, ambas com funcionalidade de adicionar livros ao carrinho, além de um convite para inscrição na Newsletter e um link para baixar o aplicativo da loja. O design é focado na usabilidade e na estética agradável, criando um ambiente convidativo para os usuários explorarem e comprarem livros. Este projeto demonstra habilidades em gerenciamento de estado e componentização no React, além de oferecer uma visão prática do desenvolvimento de e-commerce.
-                                    </p>
-                                    <a className={styles.viewMoreBtn} onClick={toggleFirstDescription}>
-                                        {isFirstDescriptionExpanded ? <TbArrowBigUpLines/> : 'Ler mais'}
+                        <section className={styles.projectsWrap}>
+                            <motion.aside 
+                                ref={ref1} 
+                                animate={inView1 ? variants.show : variants.hidden} 
+                                variants={variants} 
+                                className={styles.project1}
+                            >
+                                <h4 className={styles.projectName}>{projectData[0].name}</h4>
+                                <ul className={styles.projectStack}>
+                                    {projectData[0].stack.map((tech, index) => (
+                                        <li key={index}>{tech}</li>
+                                    ))}
+                                </ul>
+                                <p className={`${styles.projectDescription} ${isFirstDescriptionExpanded ? styles.expanded : ''}`}>
+                                    {projectData[0].description}
+                                </p>
+                                <a className={styles.viewMoreBtn} onClick={toggleFirstDescription}>
+                                    {isFirstDescriptionExpanded ? <TbArrowBigUpLines/> : 'Ler mais'}
+                                </a>
+
+                                <div className={styles.projectLinksWrap}>
+                                    <a className={styles.projectDeploy} href={projectData[0].deploy} target='_blank' rel='noopener noreferrer'>
+                                        <IoEye/> <span>Deploy</span>
                                     </a>
-
-                                    <div className={styles.projectLinksWrap}>
-                                        <a className={styles.projectDeploy} href="https://bookstore-l.vercel.app/" target='_blank' rel='noopener noreferrer'>
-                                            <IoEye/> <span>Deploy</span>
-                                        </a>
-                                        <a className={styles.githubIcon} href="https://github.com/lucasecs92/book-store-react/blob/main/book-store/src/App.jsx" target='_blank' rel='noopener noreferrer'>
-                                            <FiGithub/> <span>GitHub</span>
-                                        </a>
-                                    </div>
-                                </motion.aside>
-                                <motion.figure ref={refImg1} animate={inViewImg1 ? "show" : "hidden"} variants={imgVariants} className={styles.projectImg}
-                                >
-                                    <img src={projeto1} alt="imagem de capa do bookstore" />
-                                </motion.figure>
-                            </section>
-
-                            <section className={styles.projectsWrapReverse}>
-                                <motion.aside ref={ref2} animate={inView2 ? imgVariants.show : imgVariants.hidden} variants={imgVariants} className={styles.project2}>
-                                    <h4 className={styles.projectName}>Weather</h4>
-                                    <ul className={styles.projectStackReverse}>
-                                        <li>React JS</li>
-                                        <li>HTML</li>
-                                        <li>CSS</li>
-                                        <li>API</li>
-                                    </ul>
-                                    <p className={styles.projectDescription}>
-                                        O Weather App é uma aplicação interativa que permite aos usuários pesquisar e visualizar dados meteorológicos rápidos, confiáveis e em tempo real, a proveito da API OpenWeather. E utilizando um design responsivo e uma interface de usuário intuitiva, o aplicativo oferece uma experiência de usuário agradável e eficiente.
-                                    </p>
-                                    <div className={styles.projectLinksWrapReverse}>
-                                        <a className={styles.projectDeploy} href="https://weather-l.vercel.app/" target='_blank' rel='noopener noreferrer'>
-                                            <IoEye/> <span>Deploy</span>
-                                        </a>
-                                        <a className={styles.githubIcon} href="https://github.com/lucasecs92/weather-react/blob/main/weather/src/App.jsx" target='_blank' rel='noopener noreferrer'>
-                                            <FiGithub/> <span>GitHub</span>
-                                        </a>
-                                    </div>
-                                </motion.aside>
-
-                                <motion.figure ref={refImg2} animate={inViewImg2 ? "show" : "hidden"} variants={variants} className={styles.projectImgReverse}>
-                                    <img src={projeto2} alt="imagem de capa do projeto" />
-                                </motion.figure>
-                            </section>
-
-                            <section className={styles.projectsWrap}>
-                                <motion.aside ref={ref3} animate={inView3 ? variants.show : variants.hidden} variants={variants} className={styles.project3}>
-                                    <h4 className={styles.projectName}>To Do List</h4>
-                                    <ul className={styles.projectStack}>
-                                        <li>TypeScript</li>
-                                        <li>React</li>
-                                        <li>CSS</li>
-                                    </ul>
-                                    <p className={`${styles.projectDescription} ${isThirdDescriptionExpanded ? styles.expanded : ''}`}>
-                                        O To Do List é uma aplicação web que oferece uma maneira simples e eficaz de gerenciar tarefas diárias. Com uma interface limpa e funcionalidades intuitivas, os usuários podem adicionar, editar, remover e marcar tarefas como concluídas com facilidade, assim sendo classificado como CRUD. O projeto demonstra o uso de estados e efeitos em React, além de práticas de desenvolvimento como a componentização e a gestão de estados locais e globais. O To Do List é uma ferramenta versátil que ajuda os usuários a manterem-se organizados e produtivos.
-                                    </p>
-                                    <a className={styles.viewMoreBtn} onClick={toggleThirdDescription}>
-                                        {isThirdDescriptionExpanded ? <TbArrowBigUpLines/> : 'Ler mais'}
+                                    <a className={styles.githubIcon} href={projectData[0].github} target='_blank' rel='noopener noreferrer'>
+                                        <FiGithub/> <span>GitHub</span>
                                     </a>
+                                </div>
+                            </motion.aside>
+                            <motion.figure ref={refImg1} animate={inViewImg1 ? "show" : "hidden"} variants={imgVariants} className={styles.projectImg}
+                            >
+                                <img src={projeto1} alt="imagem de capa do bookstore" />
+                            </motion.figure>
+                        </section>
+                        <section className={styles.projectsWrapReverse}>
+                            <motion.aside 
+                                ref={ref2} 
+                                animate={inView2 ? imgVariants.show : imgVariants.hidden} 
+                                variants={imgVariants} 
+                                className={styles.project2}
+                            >
+                                <h4 className={styles.projectName}>{projectData[1].name}</h4>
+                                <ul className={styles.projectStackReverse}>
+                                    {projectData[1].stack.map((tech, index) => (
+                                        <li key={index}>{tech}</li>
+                                    ))}
+                                </ul>
+                                <p className={`${styles.projectDescription} ${isFirstDescriptionExpanded ? styles.expanded : ''}`}>
+                                    {projectData[1].description}
+                                </p>
+                                {/* <a className={styles.viewMoreBtn} onClick={toggleFirstDescription}>
+                                    {isFirstDescriptionExpanded ? <TbArrowBigUpLines/> : 'Ler mais'}
+                                </a>  */}
 
-                                    <div className={styles.projectLinksWrap}>
-                                        <a className={styles.projectDeploy} href="https://todolist-l.vercel.app/" target='_blank' rel='noopener noreferrer'>
-                                            <IoEye/> <span>Deploy</span>
-                                        </a>
-                                        <a className={styles.githubIcon} href="https://github.com/lucasecs92/to-do-list/blob/main/todolist/src/App.tsx" target='_blank' rel='noopener noreferrer'>
-                                            <FiGithub/> <span>GitHub</span>
-                                        </a>
-                                    </div>
-                                </motion.aside>
-                                <motion.figure ref={refImg3} animate={inViewImg3 ? "show" : "hidden"} variants={imgVariants} className={styles.projectImg}>
-                                    <img src={projeto3} alt="imagem de capa do projeto" />
-                                </motion.figure>
-                            </section> 
-
-                            <section className={styles.projectsWrapReverse}>
-                                <motion.aside ref={ref4} animate={inView4 ? imgVariants.show : imgVariants.hidden} variants={imgVariants} className={styles.project4}>
-                                    <h4 className={styles.projectName}>Jogo Número Secreto</h4>
-                                    <ul className={styles.projectStackReverse}>
-                                        <li>JavaScript Vanilla</li>
-                                        <li>HTML</li>
-                                        <li>CSS</li>
-                                        <li>API</li>
-                                    </ul>
-                                    <p className={`${styles.projectDescription} ${isFourthDescriptionExpanded ? styles.expanded : ''}`}> 
-                                        Um jogo interativo de adivinhação que desafia os jogadores a descobrir um número secreto usando apenas suas vozes. Este jogo combina a adivinhação com a tecnologia moderna de reconhecimento de voz, proporcionando uma experiência única. Utilizando a API Web Speech para reconhecimento de voz, o jogo oferece uma maneira inovadora e acessível de jogar, permitindo que os jogadores interajam diretamente com o jogo falando seus palpites.
-                                    </p>
-                                    <a className={styles.viewMoreBtn} onClick={toggleFourthDescription}>                            {isFourthDescriptionExpanded ? <TbArrowBigUpLines/> : 'Ler mais'}
+                                <div className={styles.projectLinksWrapReverse}>
+                                    <a className={styles.projectDeploy} href={projectData[1].deploy} target='_blank' rel='noopener noreferrer'>
+                                        <IoEye/> <span>Deploy</span>
                                     </a>
-                                    <div className={styles.projectLinksWrapReverse}>
-                                        <a className={styles.projectDeploy} href="https://jogo-numero-secreto-l.vercel.app/" target='_blank' rel='noopener noreferrer'>
-                                            <IoEye/> <span>Deploy</span>
-                                        </a>
-                                        <a className={styles.githubIcon} href="https://github.com/lucasecs92/jogo-numero-secreto/blob/main/index.html" target='_blank' rel='noopener noreferrer'>
-                                            <FiGithub/> <span>GitHub</span>
-                                        </a>
-                                    </div>
-                                </motion.aside>
+                                    <a className={styles.githubIcon} href={projectData[1].github} target='_blank' rel='noopener noreferrer'>
+                                        <FiGithub/> <span>GitHub</span>
+                                    </a>
+                                </div>
+                            </motion.aside>
+                            <motion.figure ref={refImg2} animate={inViewImg2 ? "show" : "hidden"} variants={variants} className={styles.projectImg}
+                            >
+                                <img src={projeto2} alt="imagem de capa do projeto" />
+                            </motion.figure>
+                        </section>
+                        <section className={styles.projectsWrap}>
+                            <motion.aside 
+                                ref={ref3} 
+                                animate={inView3 ? variants.show : variants.hidden} 
+                                variants={variants} 
+                                className={styles.project3}
+                            >
+                                <h4 className={styles.projectName}>{projectData[2].name}</h4>
+                                <ul className={styles.projectStack}>
+                                    {projectData[2].stack.map((tech, index) => (
+                                        <li key={index}>{tech}</li>
+                                    ))}
+                                </ul>
+                                <p className={`${styles.projectDescription} ${isThirdDescriptionExpanded ? styles.expanded : ''}`}>
+                                    {projectData[2].description}
+                                </p>
+                                <a className={styles.viewMoreBtn} onClick={toggleThirdDescription}>
+                                    {isThirdDescriptionExpanded ? <TbArrowBigUpLines/> : 'Ler mais'}
+                                </a>
 
-                                <motion.figure ref={refImg4} animate={inViewImg4 ? "show" : "hidden"} variants={variants} className={styles.projectImgReverse}>
-                                    <img src={projeto4} alt="imagem de capa do projeto" />
-                                </motion.figure>
-                            </section>
+                                <div className={styles.projectLinksWrap}>
+                                    <a className={styles.projectDeploy} href={projectData[2].deploy} target='_blank' rel='noopener noreferrer'>
+                                        <IoEye/> <span>Deploy</span>
+                                    </a>
+                                    <a className={styles.githubIcon} href={projectData[2].github} target='_blank' rel='noopener noreferrer'>
+                                        <FiGithub/> <span>GitHub</span>
+                                    </a>
+                                </div>
+                            </motion.aside>
+                            <motion.figure ref={refImg3} animate={inViewImg3 ? "show" : "hidden"} variants={imgVariants} className={styles.projectImg}
+                            >
+                                <img src={projeto3} alt="imagem de capa do projeto" />
+                            </motion.figure>
+                        </section>
+
+                        <section className={styles.projectsWrapReverse}>
+                            <motion.aside 
+                                ref={ref4} 
+                                animate={inView4 ? imgVariants.show : imgVariants.hidden} 
+                                variants={imgVariants} 
+                                className={styles.project4}
+                            >
+                                <h4 className={styles.projectName}>{projectData[3].name}</h4>
+                                <ul className={styles.projectStackReverse}>
+                                    {projectData[3].stack.map((tech, index) => (
+                                        <li key={index}>{tech}</li>
+                                    ))}
+                                </ul>
+                                <p className={`${styles.projectDescription} ${isFourthDescriptionExpanded ? styles.expanded : ''}`}>
+                                    {projectData[3].description}
+                                </p>
+                                <a className={styles.viewMoreBtn} onClick={toggleFourthDescription}>
+                                    {isFourthDescriptionExpanded ? <TbArrowBigUpLines/> : 'Ler mais'}
+                                </a>
+
+                                <div className={styles.projectLinksWrapReverse}>
+                                    <a className={styles.projectDeploy} href={projectData[3].deploy} target='_blank' rel='noopener noreferrer'>
+                                        <IoEye/> <span>Deploy</span>
+                                    </a>
+                                    <a className={styles.githubIcon} href={projectData[3].github} target='_blank' rel='noopener noreferrer'>
+                                        <FiGithub/> <span>GitHub</span>
+                                    </a>
+                                </div>
+                            </motion.aside>
+                            <motion.figure ref={refImg4} animate={inViewImg4 ? "show" : "hidden"} variants={variants} className={styles.projectImg}
+                            >
+                                <img src={projeto4} alt="imagem de capa do projeto" />
+                            </motion.figure>
+                        </section>
                     </section>
             </motion.section>
         </>
