@@ -261,7 +261,8 @@
     .projectImg img, .projectImgReverse img {
         width: 100%;
     }
-    .darkMode .projectsWrap {
+    .darkMode .projectsWrap,
+    .darkMode .projectsWrapReverse {
         border-color: var(--lightMode);
     }
 }
